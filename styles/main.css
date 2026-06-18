@@ -1,0 +1,476 @@
+/* ============================================
+   Penn State University & Eberly College of Science
+   Main Stylesheet
+   
+   Based on Penn State Brand Book v2 (https://brand.psu.edu/)
+   and Eberly College Editorial Style Guidance
+   ============================================ */
+
+/* ============================================
+   Google Fonts Import (Roboto - Official Penn State Web Font)
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Roboto+Condensed:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+/* ============================================
+   CSS Variables (Design Tokens)
+   ============================================ */
+:root {
+  /* Penn State Colors */
+  --penn-navy: #001E44;
+  --nittany-navy: #1E3A5E;
+  --lionsgate-gold: #E98300;
+  --forestry-green: #7FB04A;
+  --limestone: #E7E4DC;
+  
+  /* Supporting Colors */
+  --alert-red: #D93D00;
+  --success-green: #4DA82F;
+  --info-blue: #006BA6;
+  --white: #FFFFFF;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  
+  /* Spacing Scale */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-2xl: 24px;
+  --spacing-3xl: 32px;
+  --spacing-4xl: 48px;
+  
+  /* Typography - Roboto (Official Penn State Web Font) */
+  --font-roboto: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-roboto-condensed: 'Roboto Condensed', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-stack: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.4;
+  --line-height-relaxed: 1.6;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 4px rgba(0, 30, 68, 0.08);
+  --shadow-md: 0 2px 8px rgba(0, 30, 68, 0.1);
+  --shadow-lg: 0 4px 12px rgba(0, 30, 68, 0.15);
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+/* ============================================
+   Reset & Base Styles
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-roboto);
+  font-size: 16px;
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary);
+  background-color: #faf9f5;
+}
+
+/* ============================================
+   Typography - Per Penn State Brand Book
+   ============================================ */
+h1 {
+  font-family: var(--font-roboto);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: var(--line-height-tight);
+  color: var(--penn-navy);
+  margin-bottom: var(--spacing-lg);
+}
+
+h2 {
+  font-family: var(--font-roboto);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: var(--line-height-tight);
+  color: var(--penn-navy);
+  margin-bottom: var(--spacing-lg);
+  margin-top: var(--spacing-2xl);
+}
+
+h3 {
+  font-family: var(--font-roboto);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: var(--line-height-tight);
+  color: var(--penn-navy);
+  margin-bottom: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+}
+
+h4 {
+  font-family: var(--font-roboto-condensed);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--penn-navy);
+  margin-bottom: var(--spacing-md);
+}
+
+p {
+  font-family: var(--font-roboto);
+  margin-bottom: var(--spacing-lg);
+}
+
+a {
+  color: var(--lionsgate-gold);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--nittany-navy);
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 2px solid var(--lionsgate-gold);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   Navigation Bar
+   ============================================ */
+.navbar {
+  background-color: var(--penn-navy);
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: var(--white);
+}
+
+.navbar a:hover {
+  color: var(--lionsgate-gold);
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: var(--lionsgate-gold);
+  border-bottom: 3px solid var(--lionsgate-gold);
+  padding-bottom: var(--spacing-sm);
+}
+
+/* ============================================
+   Container & Layout
+   ============================================ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.section {
+  margin-bottom: var(--spacing-4xl);
+}
+
+.row {
+  display: flex;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+button,
+.btn {
+  display: inline-block;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font-roboto);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:focus,
+.btn:focus {
+  outline: 2px solid var(--lionsgate-gold);
+  outline-offset: 2px;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: var(--penn-navy);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--nittany-navy);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--penn-navy);
+  border: 2px solid var(--penn-navy);
+}
+
+.btn-secondary:hover {
+  background-color: var(--penn-navy);
+  color: var(--white);
+}
+
+/* Accent Button */
+.btn-accent {
+  background-color: var(--lionsgate-gold);
+  color: var(--white);
+}
+
+.btn-accent:hover {
+  background-color: #d97600;
+}
+
+/* ============================================
+   Cards
+   ============================================ */
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--limestone);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card-header {
+  border-bottom: 2px solid var(--limestone);
+  padding-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.card-header h3 {
+  margin: 0;
+}
+
+.card-body {
+  margin-bottom: var(--spacing-lg);
+}
+
+.card-footer {
+  border-top: 1px solid var(--limestone);
+  padding-top: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+/* ============================================
+   Callout Boxes & Alerts
+   ============================================ */
+.callout {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-left: 4px solid;
+  margin-bottom: var(--spacing-lg);
+  border-radius: var(--radius-sm);
+}
+
+.callout-science,
+.callout-important {
+  background-color: rgba(127, 176, 74, 0.1);
+  border-left-color: var(--forestry-green);
+  color: var(--penn-navy);
+}
+
+.callout-science strong {
+  color: var(--forestry-green);
+}
+
+.callout-alert,
+.callout-warning {
+  background-color: rgba(217, 61, 0, 0.1);
+  border-left-color: var(--alert-red);
+  color: var(--penn-navy);
+}
+
+.callout-alert strong {
+  color: var(--alert-red);
+}
+
+.callout-success {
+  background-color: rgba(77, 168, 47, 0.1);
+  border-left-color: var(--success-green);
+  color: var(--penn-navy);
+}
+
+.callout-success strong {
+  color: var(--success-green);
+}
+
+.callout-info {
+  background-color: rgba(0, 107, 166, 0.1);
+  border-left-color: var(--info-blue);
+  color: var(--penn-navy);
+}
+
+.callout-info strong {
+  color: var(--info-blue);
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+footer {
+  background-color: var(--penn-navy);
+  color: var(--white);
+  padding: var(--spacing-2xl);
+  margin-top: var(--spacing-4xl);
+  text-align: center;
+  font-size: 14px;
+}
+
+footer a {
+  color: var(--lionsgate-gold);
+}
+
+footer a:hover {
+  color: var(--white);
+}
+
+/* ============================================
+   Code & Pre-formatted Text
+   ============================================ */
+code {
+  background-color: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+}
+
+pre {
+  background-color: var(--penn-navy);
+  color: #e0e0e0;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  margin-bottom: var(--spacing-lg);
+  line-height: var(--line-height-normal);
+}
+
+pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+/* ============================================
+   Tables
+   ============================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--spacing-lg);
+}
+
+thead {
+  background-color: var(--penn-navy);
+  color: var(--white);
+}
+
+th {
+  padding: var(--spacing-md) var(--spacing-lg);
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 1px solid var(--limestone);
+}
+
+tbody tr:hover {
+  background-color: rgba(127, 176, 74, 0.05);
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  h3 {
+    font-size: 18px;
+  }
+  
+  .row {
+    flex-direction: column;
+  }
+  
+  .col {
+    min-width: 100%;
+  }
+  
+  button,
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+@media print {
+  body {
+    background-color: var(--white);
+  }
+  
+  .navbar,
+  footer {
+    display: none;
+  }
+  
+  a {
+    color: var(--penn-navy);
+  }
+  
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+  }
+  
+  .callout {
+    page-break-inside: avoid;
+  }
+}
