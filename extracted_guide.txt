@@ -1,0 +1,523 @@
+
+Eberly College of Science
+A Guide to Effective Online Teaching
+For Instructors Teaching Online
+Melissa Hicks
+5-29-2026
+
+Adapted from the Dutton Institute Peer Review Guide for Online Teaching. Licensed under Creative Commons CC BY-NC-SA 4.0.
+Last Revised: 2026 | Eberly College of Science Grove Center Office of Digital Learning, The Pennsylvania State University
+
+Table of Contents
+ TOC \o "1-3" \h \z \u Table of Contents	 PAGEREF _Toc232420923 \h 2
+Introduction: Online Teaching at the Eberly College of Science	 PAGEREF _Toc232420924 \h 0
+The Growth of Online Science Education	 PAGEREF _Toc232420925 \h 0
+Why Online Science Teaching Is Its Own Challenge	 PAGEREF _Toc232420926 \h 1
+What This Guide Is For	 PAGEREF _Toc232420927 \h 2
+The Foundation: Chickering and Gamson's Seven Principles	 PAGEREF _Toc232420928 \h 3
+Who Were They, and Why Does It Matter?	 PAGEREF _Toc232420929 \h 3
+A Note on Variation and Judgment	 PAGEREF _Toc232420930 \h 3
+Principle 1: Are Your Students Hearing From You?	 PAGEREF _Toc232420931 \h 4
+What This Principle Is Asking	 PAGEREF _Toc232420932 \h 4
+What the Research Says	 PAGEREF _Toc232420933 \h 4
+What This Looks Like in Practice	 PAGEREF _Toc232420934 \h 5
+Reflection: What? So What? Now What?	 PAGEREF _Toc232420935 \h 5
+Try This First	 PAGEREF _Toc232420936 \h 6
+Actions: What You Can Do	 PAGEREF _Toc232420937 \h 6
+Resources	 PAGEREF _Toc232420938 \h 7
+Principle 2: Are Your Students Learning From Each Other?	 PAGEREF _Toc232420939 \h 8
+What This Principle Is Asking	 PAGEREF _Toc232420940 \h 8
+What the Research Says	 PAGEREF _Toc232420941 \h 8
+What This Looks Like in Practice	 PAGEREF _Toc232420942 \h 9
+Reflection: What? So What? Now What?	 PAGEREF _Toc232420943 \h 9
+Try This First	 PAGEREF _Toc232420944 \h 10
+Actions: What You Can Do	 PAGEREF _Toc232420945 \h 10
+Resources	 PAGEREF _Toc232420946 \h 10
+Principle 3: Are Students Doing Science, or Just Watching It?	 PAGEREF _Toc232420947 \h 11
+What This Principle Is Asking	 PAGEREF _Toc232420948 \h 11
+What the Research Says	 PAGEREF _Toc232420949 \h 11
+What This Looks Like in Practice	 PAGEREF _Toc232420950 \h 12
+Reflection: What? So What? Now What?	 PAGEREF _Toc232420951 \h 12
+Try This First	 PAGEREF _Toc232420952 \h 13
+Actions: What You Can Do	 PAGEREF _Toc232420953 \h 13
+Resources	 PAGEREF _Toc232420954 \h 14
+What This Principle Is Asking	 PAGEREF _Toc232420955 \h 14
+What the Research Says	 PAGEREF _Toc232420956 \h 15
+What This Looks Like in Practice	 PAGEREF _Toc232420957 \h 15
+Reflection: What? So What? Now What?	 PAGEREF _Toc232420958 \h 16
+Try This First	 PAGEREF _Toc232420959 \h 16
+Actions: What You Can Do	 PAGEREF _Toc232420960 \h 16
+Resources	 PAGEREF _Toc232420961 \h 17
+Principle 5: Do Students Know How Long This Will Take?	 PAGEREF _Toc232420962 \h 17
+What This Principle Is Asking	 PAGEREF _Toc232420963 \h 18
+What the Research Says	 PAGEREF _Toc232420964 \h 18
+What This Looks Like in Practice	 PAGEREF _Toc232420965 \h 18
+Reflection: What? So What? Now What?	 PAGEREF _Toc232420966 \h 19
+Try This First	 PAGEREF _Toc232420967 \h 19
+Actions: What You Can Do	 PAGEREF _Toc232420968 \h 20
+Resources	 PAGEREF _Toc232420969 \h 20
+Principle 6: Do Your Students Know What Excellent Looks Like?	 PAGEREF _Toc232420970 \h 20
+What This Principle Is Asking	 PAGEREF _Toc232420971 \h 20
+What the Research Says	 PAGEREF _Toc232420972 \h 21
+What This Looks Like in Practice	 PAGEREF _Toc232420973 \h 21
+Reflection: What? So What? Now What?	 PAGEREF _Toc232420974 \h 22
+Try This First	 PAGEREF _Toc232420975 \h 22
+Actions: What You Can Do	 PAGEREF _Toc232420976 \h 22
+Resources	 PAGEREF _Toc232420977 \h 23
+Principle 7: Who Might Your Course Be Leaving Out?	 PAGEREF _Toc232420978 \h 23
+What This Principle Is Asking	 PAGEREF _Toc232420979 \h 23
+What the Research Says	 PAGEREF _Toc232420980 \h 23
+What This Looks Like in Practice	 PAGEREF _Toc232420981 \h 24
+Reflection: What? So What? Now What?	 PAGEREF _Toc232420982 \h 24
+Try This First	 PAGEREF _Toc232420983 \h 25
+Actions: What You Can Do	 PAGEREF _Toc232420984 \h 25
+Resources	 PAGEREF _Toc232420985 \h 26
+Reflective Practice	 PAGEREF _Toc232420986 \h 26
+Why Reflection Matters	 PAGEREF _Toc232420987 \h 26
+Benchmarking Your Practice	 PAGEREF _Toc232420988 \h 26
+Ongoing Reflection Prompts	 PAGEREF _Toc232420989 \h 27
+The Peer Review Process for Online Teaching	 PAGEREF _Toc232420990 \h 28
+Resources and Support	 PAGEREF _Toc232420991 \h 29
+
+Introduction: Online Teaching at the Eberly College of Science 
+The Growth of Online Science Education
+Imagine a student in your Genetics course. She's sitting at her kitchen table in Pittsburgh at 10:30pm. Her kids are finally asleep. She's got your module open on her laptop next to a half-eaten dinner. She works full time. She hasn't been on a college campus in years. She is genuinely trying to understand meiosis, and she is doing it completely alone.
+She's not an edge case. She's your student.
+More than 54% of all U.S. higher education students are now enrolled in at least one online course — a figure that jumped roughly 12 points above pre-pandemic projections and shows no sign of reversing. At Penn State, World Campus enrollment stands at 13,883 students as of Fall 2025, with nearly 71% of undergraduates studying part-time. These are working professionals, caregivers, military personnel, international learners, and first-generation college students. They are completing your Chemistry lab from a rural community without reliable broadband. They are working through your Calculus problem sets after a night shift.
+Nationally, the data tell a compelling story. According to Fall 2023 IPEDS data analyzed by Phil Hill and Associates, more than 54% of all U.S. higher education students are now enrolled in at least one online course, a figure that represents a roughly 12% jump above pre-pandemic projections. Before COVID-19, approximately 35% of students took some online coursework. The pandemic accelerated a structural shift that shows no signs of reversing. Exclusive distance education enrollments grew from 17.6% of all students in Fall 2019 to 26.4% in Fall 2023, nearly a 10-point increase in just four years.
+Online education is no longer a niche alternative. It is how a large portion of Eberly College of Science students experience their education. Your Astronomy course, your Biology course, your Statistics course—these are reaching students who will never walk through a door at University Park.
+That matters for how you design what happens inside your course..
+Why Online Science Teaching Is Its Own Challenge
+Most disciplines can move online without losing their essential character. Science is harder. Science is a contact sport. It happens in labs, in real time, with real materials, with a mentor watching over your shoulder when you're about to make a mistake. None of that transfers automatically to a screen.
+The Journal of Computing in Higher Education puts it plainly: effective online science courses have to get three things right simultaneously — technological usability (does the platform work?), pedagogical usability (does the design support learning?), and social usability (does the course feel like a human experience?). When any one of those breaks down, student learning suffers.
+The challenges that show up most often in online science courses include:
+Labs and hands-on learning: Translating wet labs and physical demonstrations into effective online experiences requires deliberate design. Virtual and remote labs can work well, but only when they're woven into the course rather than dropped in as substitutes.
+Student isolation and disengagement: A 2023 literature review published in Frontiers in Communication found that online students who feel isolated are significantly more likely to disengage and, in some cases, leave the university entirely. Science courses — where the conceptual work is hard and support is limited — are especially vulnerable to this.
+Faculty transition. The same review found that faculty who simply moved their face-to-face materials into Canvas, without redesigning for online delivery, saw the worst outcomes for students. That's not a criticism. It's information worth acting on.
+Diverse student needs. Your World Campus students are mostly balancing coursework with jobs and families. Deadlines, synchronous requirements, and workload estimates that work for a residential student on campus can create real barriers for this population.
+
+What This Guide Is For
+We built this guide because your students deserve a well-designed online course, and because you, as a faculty member, deserve practical support in building one. Not a checklist. Not a compliance document. A resource grounded in decades of research on what actually makes teaching effective.
+You can use it three ways:
+Formative self-reflection. Work through it on your own. Look at your current course, identify what's working, and set goals for what you want to change.
+Peer observation. Use it as a shared framework when a colleague observes your course and provides feedback.
+Summative documentation. Use it as the basis for a formal peer review letter for your annual report or promotion and tenure dossier, in alignment with Penn State University Policy AC23.
+The goal is the same regardless of how you use it: honest reflection, concrete growth, and a better experience for the students in your courses.
+
+The Foundation: Chickering and Gamson's Seven Principles 
+Who Were They, and Why Does It Matter?
+In 1987, Arthur Chickering and Zelda Gamson published a synthesis of more than 50 years of research on how college students learn — what motivates them, what helps them persist, and what causes them to disengage and drop out. The result was seven principles, simple enough to remember, robust enough to apply across any discipline, any institution, any modality.
+The seven principles are:
+Good practice encourages contact between students and faculty.
+Good practice develops reciprocity and cooperation among students.
+Good practice encourages active learning.
+Good practice gives prompt feedback.
+Good practice emphasizes time on task.
+Good practice communicates high expectations.
+Good practice respects diverse talents and ways of learning.
+Research consistently confirms that these principles are more important in online environments, not less — precisely because the natural structures of the physical classroom that used to do this work for you are now absent. A 2023 review in Frontiers in Communication found that courses designed around these principles produce higher student satisfaction, deeper learning, and lower attrition rates.
+Penn State's own Elements of Effective Teaching framework, implemented beginning Fall 2023, maps directly onto the Seven Principles across four dimensions: Effective Course Design, Effective Instruction, Inclusive and Ethical Pedagogy, and Reflective and Evolving Practice. This guide addresses all four.
+A Note on Variation and Judgment
+Not every principle will show up equally in every course. A large introductory Chemistry course looks different from a small graduate Statistics seminar. A faculty member in their first year of online teaching is in a different place than a twenty-year veteran. This guide isn't looking for perfection. It's looking for honest reflection and a genuine commitment to growth.
+Principle 1: Are Your Students Hearing From You?
+"Frequent student-faculty contact in and out of classes is the most important factor in student motivation and involvement." — Chickering and Gamson, 1987
+What This Principle Is Asking
+Here's a quick diagnostic: your course has been running for three weeks. Can you name five of your students? Have any of them heard from you in a way that wasn't automated?
+In a classroom, contact happens without anyone planning it. Before class, after class, in the hall, in the lab. Students read your body language. They linger after a lecture to push on an idea. These small, unremarkable moments are actually doing a lot of work — they signal to students that you know they're there, that you care whether they understand, that you're invested in their success.
+In an online course, none of that happens on its own. If you don't build contact into the course structure, many students will complete your entire course without a single meaningful interaction with you. They'll submit assignments into silence. They'll wait anxiously for grades. They'll struggle and say nothing rather than reach out to someone they have never spoken to.
+Instructor presence is not a "nice to have" in online science courses. It's a fundamental driver of student motivation, persistence, and learning.
+What the Research Says
+Research published in Frontiers in Education found that online students consistently identify early relationship-building and consistent instructor participation as the most important factors in their sense of belonging and motivation to continue in a course. Students described instructors who communicated authentically — sharing their personality, their enthusiasm for the subject, their genuine concern for student wellbeing — as significantly reducing their anxiety and increasing their confidence (McNeill and Bushaala 2023).
+The University of Iowa's faculty development research on instructor presence found that even small, consistent actions — a weekly announcement, a brief video update, a personalized response to a student question — compound over a semester to create a powerful sense of connection (University of Iowa 2024).
+One finding worth highlighting: students place significantly greater value on substantive instructor presence — meaning real engagement with course content and student ideas — than on stylistic presence, meaning formatting and visual polish. In other words, students notice and respond to whether you're genuinely engaged. They can tell the difference (Watson, Sullivan, and Watson 2023).
+What This Looks Like in Practice
+These examples come from across the college. Take them as starting points, not scripts.
+An Astronomy instructor records a short video at the start of each module connecting the week's content to a current space mission or NASA dataset, making the material feel immediate rather than abstract.
+A Biochemistry instructor runs a "Molecule of the Week" discussion forum where students post a short explanation of a biomolecule related to the week's content and respond to two peers — building vocabulary and community at the same time.
+A Biology instructor records a 3-minute "Week in Review" video each Sunday evening, previewing the upcoming module and naming students who contributed something worth noticing in the previous week's discussion.
+A Chemistry instructor posts a "Common Misconceptions" announcement after each major exam — addressing the three or four concepts that tripped up most students, without naming anyone, with additional explanation and resources.
+A Mathematics instructor holds weekly Zoom office hours and maintains an asynchronous "Ask the Professor" forum where students can post questions any time and get a response within 24 hours.
+A Physics instructor uses Course Insights to identify students who haven't logged in for five or more days, then sends a personal message checking in.
+A Statistics instructor begins each module with a short video connecting the week's content to a real-world application — a recent study, a news story, a dataset from their own research — so the material never feels purely theoretical.
+Reflection: What? So What? Now What?
+What? Look at your course as it currently exists. How does contact between you and your students actually happen?
+When a student has a question, do they know exactly how to reach you and when to expect a response?
+How often do you initiate contact — not in response to a question, but proactively?
+Do your students know who you are as a scientist? Have you shared what you're curious about, what drew you to this discipline?
+If a student is struggling silently, what would tip you off?
+So what? Students who don't feel connected to their instructor disengage — and in online science courses, disengagement often becomes withdrawal. The cost of invisible instructor presence is real and measurable.
+Now what? Pick one thing below and do it before the next module opens.
+Try This First
+Record a welcome video. It doesn't need to be polished. Two to five minutes. Tell students who you are as a scientist — your research, what you find genuinely interesting about the material in this course, and how to reach you. Shoot it on your phone if that's easiest. Students respond to authenticity more than production value.
+
+Actions: What You Can Do
+Establish your presence from Day One
+Record a welcome video (2-5 minutes) that introduces you as a person and a scientist, not just as an instructor. Share your research interests, your enthusiasm for the subject, your approach to teaching. Use a conversational tone. This is not a lecture.
+Consider building a liquid syllabus — a welcoming, mobile-friendly course introduction that uses images, video, and direct language to set a warm tone and signal to students that they're entering a course designed with their success in mind. Research shows that students who encounter one before a course begins report lower anxiety and a stronger sense of belonging from Day One. A Penn State guide is available at How to Create a Liquid Syllabus.
+Create a "Start Here" module in Canvas that orients students to the course, sets expectations for communication, and makes them feel genuinely welcomed.
+Communicate consistently and proactively
+Post weekly announcements that do more than list deadlines. Acknowledge student effort, preview upcoming content, share something you find interesting about what's ahead.
+State your response time policy clearly (e.g., "I respond within 24 hours on weekdays and 48 hours on weekends") and honor it.
+Use Course Insights to spot students whose engagement is dropping before a small problem becomes a larger one.
+Use Canvas Inbox for personalized outreach to students who appear to be falling behind.
+Make office hours accessible
+Offer virtual office hours via Zoom at multiple times to accommodate students in different time zones and with different schedules.
+Consider asynchronous office hours via a discussion forum or video response tool for students who can't attend live sessions.
+Explicitly invite students to office hours in your announcements. Many students — especially first-generation students — don't feel entitled to take up your time. Make it clear that you want to hear from them.
+Be present in discussions
+Participate in discussion forums thoughtfully. Rather than validating responses ("Great point!"), ask probing follow-up questions, connect student ideas to course concepts, and model intellectual curiosity.
+Respond to at least some student posts individually and personally, using the student's name and engaging with the specific content of their contribution.
+Resources
+Five Steps for Enhancing Instructor Presence in Online Courses — University of Iowa (2024)
+Meaningful Connection in Virtual Classrooms — McNeill and Bushaala, Frontiers in Education (2023)
+Teaching Presence in Asynchronous Online Classes: It's Not Just a Facade — Watson, Sullivan, and Watson, Online Learning Journal (2023)
+Instructor Presence in the Online Classroom — University of North Texas
+Creating Community in Online Courses — University of Pennsylvania CETLI
+Liquid Syllabus — Michelle Pacansky-Brock, California Community Colleges
+How do I use the Inbox? — Canvas Instructor Guide
+
+Principle 2: Are Your Students Learning from Each Other?
+"Learning is enhanced when it is more like a team effort than a solo race. Good learning, like good work, is collaborative and social, not competitive and isolated." — Chickering and Gamson, 1987
+What This Principle Is Asking
+Science doesn't happen in isolation. Research is conducted in teams. Data is peer-reviewed. Discoveries are built on the work of others. And yet the default structure of many online science courses looks nothing like this — students reading alone, completing problem sets alone, submitting work alone, never once encountering another scientist's thinking.
+If you want students to learn from each other, you have to design for it. It won't happen on its own.
+What the Research Says
+A qualitative study in Education and Information Technologies found that science students — in Chemistry, Biology, and Physics — explicitly preferred collaborative learning for complex conceptual material. Group brainstorming and peer discussion helped them work through difficult problems in ways that individual study couldn't. But the same study identified the failure modes that kill online group work: free-riding, personality clashes, no clear structure. Successful online collaboration requires explicit role assignment, clear accountability, and instructor facilitation — not just creating groups and hoping for the best (Chim, Dolmans, oude Egbrink, and Savelberg 2024).
+A systematic review on peer assessment in Frontiers in Education found something counterintuitive: giving feedback benefits students more than receiving it. The act of critically analyzing another student's lab report or data analysis forces the reviewer to apply course concepts at a higher cognitive level than simply completing the assignment themselves. And anonymous peer review produces significantly more honest and constructive feedback than open review (Ortega-Ruiperez and Correa-Gorospe 2024).
+Research in Discover Education concluded that mandatory, structured peer interaction is not optional enrichment. It is a critical intervention for preventing the disengagement that online environments naturally produce (Akpen et al. 2024).
+What This Looks Like in Practice
+An Astronomy instructor runs a "Sky Watch" forum where students post observations or news from current space missions and respond substantively to two peers, connecting observations to course concepts.
+A Biochemistry instructor assigns students to permanent lab groups of four for the semester. Each week, the group completes a collaborative data interpretation exercise with rotating roles: facilitator, recorder, analyst, presenter.
+A Biology instructor uses a "Science in the News" forum where students post a current research article related to the week's topic and respond to two peers.
+A Chemistry instructor uses a structured "Peer Lab Review" activity where student pairs exchange pre-lab write-ups before a virtual lab session, giving feedback on each other's hypotheses using a rubric that mirrors the criteria of scientific journals.
+A Mathematics instructor assigns collaborative problem-solving activities where each student is responsible for explaining one step of a multi-step proof to the group.
+A Physics instructor assigns peer teaching presentations in which small groups create a short video explaining a course concept, then respond to questions in a discussion forum.
+A Statistics instructor uses Canvas's peer review feature to have students critique each other's data analysis projects before final submission, using a structured rubric focused on methodology and interpretation.
+Reflection: What? So What? Now What?
+What? Look at your course. Where does student-to-student learning actually happen — not just alongside each other, but from each other?
+Do your students know each other's names?
+How do you structure group work so that no one student carries the group?
+Is your peer feedback structured and purposeful, or informal and optional?
+So what? Students who lack structured peer interaction report higher isolation, lower engagement, and worse academic outcomes. The absence of peer learning isn't neutral — it actively costs you.
+Now what? Pick one structured peer interaction to add to your course this semester.
+Try This First
+Add one anonymous peer review to a major assignment using Canvas's built-in peer review tool. Give students a rubric focused on reasoning and methodology. Debrief the activity with a brief discussion of what they learned from reviewing their peer's work — not just from receiving feedback on their own.
+
+Actions: What You Can Do
+Design structured, purposeful collaboration
+Assign students to persistent small groups of 3 to 4 for the semester. Familiarity reduces friction and builds trust over time.
+Provide explicit role assignments — facilitator, recorder, analyst, devil's advocate — and rotate them so all students develop different skills.
+Build in individual accountability alongside group products. Ask students to submit a brief individual reflection on the group's process and each member's contribution.
+Use peer review strategically
+Implement structured peer review using Canvas's built-in peer review tool for major assignments such as lab reports, data analysis projects, or research papers.
+Provide a detailed rubric focused on substantive feedback — methodology, reasoning, interpretation — rather than surface-level comments.
+Consider anonymous peer review to reduce social pressure and improve feedback quality.
+Debrief peer review activities: ask students what they learned from reviewing a peer's work, not just from receiving feedback on their own.
+Create community from the start
+Include an icebreaker activity in the first week. Ask students to share a science question they've always wondered about, or a moment when they first became interested in your discipline.
+Create a "Coffee Shop" discussion forum for conversations unrelated to course content. This is a small gesture. It makes a real difference.
+
+Resources
+Peer Assessment to Promote Self-Regulated Learning — Ortega-Ruiperez and Correa-Gorospe, Frontiers in Education (2024)
+Experiences of Face-to-Face and Online Collaborative Learning — Chim et al., Education and Information Technologies (2024)
+Impact of Online Learning on Student Engagement — Akpen et al., Discover Education (2024)
+How do I use peer review assignments in a course? — Canvas Instructor Guide
+
+Principle 3: Are Students Doing Science, or Just Watching It?
+"Learning is not a spectator sport. Students do not learn much just by sitting in classes listening to teachers, memorizing pre-packaged assignments, and spitting out answers." — Chickering and Gamson, 1987
+What This Principle Is Asking
+Here's the question to ask about every part of your course: what are students doing with this material? Not receiving it. Not storing it. Doing something with it.
+In online science courses, the default often ends up as: watch lecture, read chapter, take quiz. Those components have their place. But on their own, they position students as passive consumers of content. They're not enough to produce the kind of learning that science education is actually aiming for.
+Active learning means asking students to analyze, apply, create, evaluate, experiment, and reflect — not just read and recall. In science, this isn't optional. Science is a process of inquiry. The content is inseparable from the practice.
+What the Research Says
+A systematic review in Frontiers in Education identified collaborative learning, hands-on discovery, and inquiry-based learning as the most effective instructional approaches in online STEM courses. Courses integrating active, interactive elements produced significantly better outcomes than those relying primarily on passive content delivery (Meng et al. 2024).
+For online labs specifically, a 2023 special issue of the Journal of Computing in Higher Education found something important: virtual labs treated as isolated activities — no connection to learning objectives, no peer interaction, no instructor feedback — produce minimal learning gains. Virtual labs embedded in a rich pedagogical ecosystem — with pre-lab preparation, collaborative analysis, and reflective debriefing — produce outcomes comparable to physical labs (May, Jahnke, and Moore 2023).
+The question isn't whether to use a virtual lab. It's whether the virtual lab is woven into the fabric of the course in a way that supports real inquiry.
+What This Looks Like in Practice
+An Astronomy instructor uses NASA's publicly available datasets to have students conduct their own observational analyses, formulate hypotheses about stellar phenomena, and present findings in a discussion forum.
+A Biology instructor assigns case studies based on real published research — students evaluate the methodology, interpret the data, and propose follow-up experiments, replicating the process of peer review.
+A Biochemistry instructor uses Labster virtual labs for pre-lab preparation, requiring students to complete the simulation before a synchronous virtual lab session where they discuss observations and hypotheses with peers.
+A Chemistry instructor uses ChemCollective virtual labs to let students design their own experiments — choosing reagents, concentrations, and procedures — before analyzing results.
+A Mathematics instructor uses Desmos for interactive graphing activities that let students explore mathematical relationships visually before working through formal proofs.
+A Physics instructor uses PhET Interactive Simulations to let students explore physical phenomena through virtual experimentation before engaging with the mathematical formalism.
+A Statistics instructor uses real datasets from ICPSR or Kaggle, requiring students to formulate their own research questions and defend their analytical choices in writing.
+Reflection: What? So What? Now What?
+What? Look at your course module by module. What cognitive work are students actually doing? Beyond reading and watching — where are they analyzing, applying, or deciding?
+Where do students have the opportunity to make choices, take intellectual risks, and learn from mistakes?
+If you use virtual labs or simulations, how are they connected to the rest of the course?
+How do your assignments connect to what scientists actually do in your discipline?
+So what? Passive course design doesn't just produce less learning — it communicates something to students about what science is. A course built entirely around watching and recalling teaches students that science is a body of facts, not a process of inquiry.
+Now what? Identify one place in your course where students are currently passive and replace it with something that requires a decision or an interpretation.
+Try This First
+Replace one reading-then-quiz sequence with a guided inquiry activity. Ask students to explore a phenomenon, form a hypothesis, and interpret some data before reading the textbook explanation. Even a short PhET simulation followed by two interpretive questions changes the cognitive work significantly.
+
+Actions: What You Can Do
+Embed inquiry and discovery
+Replace or supplement some reading assignments with guided inquiry activities that ask students to explore a phenomenon and generate hypotheses before reading the textbook explanation.
+Use case studies based on real scientific research to engage students in evaluating evidence, identifying limitations, and drawing conclusions.
+Assign research-based projects that require students to engage with primary literature, not just textbooks.
+Leverage virtual and interactive tools
+Labster — virtual laboratory experiences for Biology, Chemistry, and Biochemistry
+PhET Interactive Simulations — virtual experimentation for Physics and Chemistry
+ChemCollective Virtual Labs — open-ended chemistry simulations from Carnegie Mellon University
+Desmos and GeoGebra — interactive mathematical exploration for Mathematics and Statistics
+ICPSR and Kaggle — real-world datasets for Statistics and data science courses
+Build reflection into the learning process
+Include brief reflective writing prompts at the end of major assignments or modules: what did you learn? What surprised you? What questions remain?
+Use exit tickets — brief Canvas quizzes or discussion posts at the end of each module — to help students consolidate learning and identify gaps.
+
+Resources
+A Systematic Review of the Effectiveness of Online Learning in Higher Education — Meng et al., Frontiers in Education (2024)
+Online Laboratories and Virtual Experimentation in Higher Education — May, Jahnke, and Moore, Journal of Computing in Higher Education (2023)
+Labster | PhET Simulations | ChemCollective
+Desmos | GeoGebra
+ICPSR Data Repository | Kaggle Datasets
+
+Principle 4: Does Your Feedback Do Anything?
+"Knowing what you know and don't know focuses learning. Students need appropriate feedback on performance to benefit from courses." — Chickering and Gamson, 1987
+What This Principle Is Asking
+Before: A student submits a lab report. Three weeks later, a number appears in Canvas. Two words in the comments: "Needs improvement."
+After: The same student gets a 90-second audio note. Her instructor walks through exactly where her reasoning broke down, explains why it matters for the concept at hand, and tells her specifically what to do differently next time. She submits her next lab report with more confidence.
+The difference isn't just courtesy. It's the difference between feedback that teaches and feedback that scores.
+Feedback is the engine of learning. Without it, students can't calibrate. They can't know whether they understood the concept, whether their approach was sound, or whether their scientific reasoning is on track. In a physical classroom, feedback is continuous and often informal. In an online course, every bit of that has to be deliberately designed and consistently delivered.
+What the Research Says
+A systematic review in Education and Information Technologies identified the key characteristics of feedback that actually works: it's timely (within a publicized, reasonable timeframe), specific (focused on observable behaviors and reasoning), positive (acknowledging strengths as well as gaps), and actionable (telling students concretely what to do next, not just what they got wrong) (Kerman et al. 2024).
+The same review found that technology-mediated feedback — audio, video, or annotated document feedback — is often perceived as more personal and more useful by online students than text-only comments, particularly for complex assignments like lab reports and data analysis projects (Kerman et al. 2024).
+Research on formative assessment consistently shows that frequent, low-stakes opportunities for self-assessment — practice quizzes, concept checks, worked examples — significantly improve performance on high-stakes assessments and reduce test anxiety.
+What This Looks Like in Practice
+An Astronomy instructor records a brief video each week after major assignments are returned, walking through common errors across the class — without naming anyone — and connecting those errors to the underlying conceptual material.
+A Biology instructor uses Canvas rubrics for all major assignments, so students know exactly what's expected before they submit and can use the returned rubric to understand where they lost points and why.
+A Biochemistry instructor provides audio feedback on lab reports using Canvas's media recording feature — walking students through reasoning errors in a conversational tone that's hard to replicate in text.
+A Chemistry instructor uses Gradescope to grade handwritten problem sets and lab reports, using AI-assisted grouping to apply consistent, detailed feedback efficiently across the whole class.
+A Mathematics instructor posts worked solutions to problem sets within 48 hours of the deadline, with detailed annotations explaining the reasoning at each step.
+A Physics instructor uses Gradescope's rubric-based grading to ensure that every student receives consistent, structured feedback on problem-solving approach, mathematical execution, and conceptual understanding.
+A Statistics instructor builds practice quizzes with detailed answer explanations into each module, letting students test their understanding before graded work.
+Reflection: What? So What? Now What?
+What? Think about the last set of assignments you returned.
+How quickly did students get feedback? Was that timeframe clearly communicated?
+Was the feedback specific enough that a student could read it and know exactly what to do differently?
+Do students have chances to test their understanding before high-stakes assessments?
+So what? Feedback that arrives too late, says too little, or gives no direction for improvement doesn't improve learning. It just documents outcomes.
+Now what? State a feedback turnaround time in your syllabus and hold yourself to it. Then try audio feedback on one assignment this semester.
+Try This First
+Try one audio feedback comment on a major assignment this semester using Canvas's media recording feature in SpeedGrader. You don't need a script. Just talk through what the student did, where their reasoning broke down, and what you'd want to see next time. Two to three minutes. Students consistently report audio feedback as more useful and more human than text alone.
+
+Actions: What You Can Do
+Establish and honor clear feedback policies
+State your feedback turnaround time explicitly in your syllabus and honor it.
+Use Canvas rubrics for all major assignments so that grading criteria are transparent before submission.
+Make feedback specific and actionable
+For each major assignment, address what the student did well, what needs improvement, and specifically how to improve it.
+Try audio or video feedback for complex assignments. A 2 to 3 minute audio note can convey nuance and warmth that's hard to achieve in text.
+Use Canvas SpeedGrader's comment library to save frequently used feedback phrases, making detailed feedback more efficient at scale.
+The Eberly College of Science has a license to Gradescope — well-suited to science courses, it handles handwritten problem sets, lab reports, and coding assignments and integrates directly with Canvas. Contact Melissa Hicks to get started.
+Build in formative assessment
+Create practice quizzes with detailed answer explanations at the end of each module.
+Use Canvas's quiz analytics to identify concepts that large numbers of students are struggling with and address them proactively.
+Consider draft submission opportunities for major assignments so students can improve their work before it's graded.
+Resources
+Online Peer Feedback in Higher Education: A Synthesis of the Literature — Kerman et al., Education and Information Technologies (2024)
+Seven Keys to Effective Feedback — Grant Wiggins, ASCD
+How do I use SpeedGrader? — Canvas Instructor Guide
+Gradescope — licensed for Eberly College of Science faculty
+
+Principle 5: Do Students Know How Long This Will Take?
+"Time plus energy equals learning. There is no substitute for time on task." — Chickering and Gamson, 1987
+What This Principle Is Asking
+Think about your course from the outside. A student gets access on the first day of the semester. She opens the syllabus. Does she know how many hours a week this will require? Does she know which weeks will be heavier? Does she have enough information to decide, honestly, whether she can manage this alongside her job and her kids?
+In a residential course, the structure of the academic calendar provides students with an external scaffold for managing time. In an online course, that scaffold is mostly absent. Students have to construct it themselves. And many of them — particularly the part-time, working adult students who make up the majority of the World Campus population — are doing that construction in a very constrained space.
+This principle is also about equity. A student who works nights experiences your deadlines differently than a student who has open afternoons. Designing with time on task in mind isn't just good pedagogy. It's a form of respect for the lives your students are actually living.
+What the Research Says
+The Time for Class 2024 report surveyed more than 3,000 administrators, instructors, and students and found that 45% of students report increased academic workload and stress as a direct result of digital learning environments. Students described feeling overwhelmed by the volume of digital content and uncertain how to prioritize across multiple online courses (Bharadwaj et al. 2024).
+The same report found that students who received explicit guidance on time management — estimated time-to-completion for assignments, clearly paced deadlines, course-specific study tips — reported significantly lower stress and higher engagement (Bharadwaj et al. 2024).
+Cognitive load research on online STEM courses is direct: poorly paced courses produce significantly worse learning outcomes than well-paced ones, independent of content quality. When students are overwhelmed, they don't learn. They survive (Chen, Paas, and Sweller 2023).
+What This Looks Like in Practice
+An Astronomy instructor builds a "How to Succeed in This Course" page into the Start Here module with a realistic week-by-week time commitment guide and links to Penn State's academic support resources.
+A Biology instructor includes an "About This Module" page at the beginning of each module with learning objectives and an estimated time-to-completion ("This module should take approximately 4 to 5 hours, including the virtual lab").
+A Biochemistry instructor runs a "workload check" survey at the end of Week 3 — asking students how long they're actually spending on each component. She uses the data to adjust time estimates for the rest of the semester and tells students why she's changing them.
+A Chemistry instructor publishes a course calendar at the start of the semester that maps all major deadlines, flags heavy weeks, and suggests a weekly study schedule.
+A Mathematics instructor includes time estimates on problem sets: "Most students complete this in 2 to 3 hours. If you're spending significantly more time, please reach out."
+A Physics instructor uses Canvas module release settings to pace the course on a weekly schedule — preventing students from racing ahead, then falling behind.
+A Statistics instructor sets assignment deadlines on Sunday evenings, based on research showing that online students are most active at the end of the week, rather than defaulting to mid-week deadlines that may conflict with work schedules.
+Reflection: What? So What? Now What?
+What? Walk through your course calendar.
+Do students know how many hours per week this course requires?
+Are there crunch weeks where multiple major assignments land simultaneously?
+When you set deadlines, were you thinking about when your students are actually available to work?
+So what? Students who can't predict and manage their workload don't just fall behind — they disengage entirely. Workload transparency isn't a concession to students. It's a condition for learning.
+Now what? Add time-to-completion estimates to every module overview before the next semester starts.
+Try This First
+Run a workload check survey at the end of Week 3. Ask one question: "How many hours did you spend on this course last week?" Use the data to calibrate your estimates for the rest of the semester. Tell students what you found and what you're adjusting. It takes 20 minutes to set up and builds an enormous amount of trust.
+
+Actions: What You Can Do
+Include a weekly time commitment estimate in your syllabus.
+Add time-to-completion estimates to each module overview and major assignment.
+Identify "heavy weeks" in your course calendar and communicate them to students in advance.
+Distribute assignment deadlines evenly across the semester.
+Set deadlines at times convenient for working adult students (e.g., Sunday evenings rather than Wednesday mornings).
+Use Canvas's module release settings to pace the course and prevent students from getting overwhelmed trying to do everything at once.
+Include a "How to Succeed in This Course" page in Canvas with specific, practical advice on managing time in an online science course.
+Resources
+Time for Class 2024 — Bharadwaj et al., Tyton Partners (2024)
+A Cognitive Load Theory Approach to Defining and Measuring Task Complexity — Chen, Paas, and Sweller, Educational Psychology Review (2023)
+Penn State World Campus: Time Management for Online Learners
+Course Pacing in Canvas — Canvas Instructor Guide
+
+Principle 6: Do Your Students Know What Excellent Looks Like?
+"Expect more and you will get more. High expectations are important for everyone — for the poorly prepared, for those unwilling to exert themselves, and for the bright and well-motivated." — Chickering and Gamson, 1987
+What This Principle Is Asking
+Here's the gap this principle is trying to close: You know what excellent scientific work looks like. Your students, especially early in the course, often don't. They're not being lazy when they aim too low. They're guessing.
+High expectations don't mean making things harder. They mean making the target explicit. When students can see what excellent work looks like — not just read a description of it, but see a concrete example with commentary explaining why it's strong — they perform better. This is one of the most consistent findings in educational psychology.
+This principle is also about belief. Research shows students perform better when they sense that their instructor genuinely believes in their capacity to succeed. That belief shows up in your language, in your feedback, and in how you respond when a student's reasoning is partly right and needs to go further.
+What the Research Says
+Research on self-regulated learning found that providing students with worked examples and model answers of high-quality work significantly improves their performance on subsequent assignments. When students can see what they're aiming for, they calibrate more accurately (Kerman et al. 2024).
+The same body of research found that writing learning objectives in terms of what students will be able to do — rather than what content will be covered — is one of the strongest predictors of student achievement in online courses. Students who understand the purpose of their learning activities engage more deeply and retain material more effectively (Kerman et al. 2024).
+Rubric-based assessment research is consistent: detailed rubrics provided before submission improve both the quality of student work and the efficiency of instructor grading.
+What This Looks Like in Practice
+An Astronomy instructor assigns a "Scientist's Notebook" reflective journal throughout the semester — students document their thinking process, their questions, and their evolving understanding, modeling the intellectual habits of a working scientist.
+A Biology instructor writes module learning objectives using Bloom's Taxonomy action verbs: "By the end of this module, you will be able to analyze the relationship between genotype and phenotype in a dihybrid cross."
+A Biochemistry instructor shares a "Standards of Scientific Argument" document at the start of the course defining what constitutes strong evidence, sound reasoning, and appropriate use of primary literature.
+A Chemistry instructor shares annotated examples of excellent lab reports from previous semesters, with identifying information removed and commentary explaining what makes each element strong.
+A Mathematics instructor posts "What I'm Looking For" notes with each major assignment, explaining the specific mathematical reasoning and communication standards that will be applied in grading.
+A Statistics instructor uses a detailed analytic rubric for data analysis projects that specifies exactly what distinguishes an excellent analysis from a good one — across research question formulation, methodology, interpretation, and communication.
+Reflection: What? So What? Now What?
+What? Think about your major assignments.
+Have you shown students what excellent work looks like in your discipline — not just described it?
+Are your learning objectives written in terms of what students will be able to do?
+When you push back on a student's thinking, do you do it in a way that communicates confidence in their ability to go further?
+So what? Unstated expectations aren't high standards. They're a guessing game.
+Now what? Find one assignment in your course and add three things before next semester: a model of excellent work with commentary, a rubric, and a "What I'm Looking For" note.
+Try This First
+Share one annotated example of excellent student work (identifying information removed) for a major assignment this semester. Write two to three sentences explaining what makes each key element strong. Post it before students begin the assignment, not after.
+
+Actions: What You Can Do
+Write learning objectives for each module using Bloom's Taxonomy action verbs.
+Provide detailed rubrics for all major assignments before students begin working.
+Share annotated examples of excellent work from previous semesters with commentary.
+Include a "What I'm Looking For" note with each major assignment.
+Use probing questions in discussion forums and feedback that push students toward deeper thinking.
+Acknowledge intellectual risk-taking — students who ask difficult questions or propose creative solutions, even when their attempts are imperfect.
+Consider draft submissions for major assignments, with feedback before final submission.
+Resources
+Using Bloom's Taxonomy — University of Arkansas Teaching Innovation and Pedagogical Support
+Online Peer Feedback in Higher Education — Kerman et al., Education and Information Technologies (2024)
+Schreyer Institute for Teaching Excellence — Penn State resources on course design, objectives, and assessment
+Gradescope — licensed for Eberly College of Science faculty
+
+Principle 7: Who Might Your Course Be Leaving Out?
+"There are many roads to learning. People bring different talents and styles of learning to college." — Chickering and Gamson, 1987
+What This Principle Is Asking
+Your online science courses serve a genuinely diverse student population. Recent high school graduates and mid-career professionals. Students for whom English is a second language and native speakers. Students with disabilities. Students with strong mathematical backgrounds and students who are still building those foundations.
+Respecting diverse talents and ways of learning means designing your course so that all students have a genuine opportunity to succeed — not by lowering standards, but by providing multiple pathways to meet those standards.
+And here's the harder point: If your course design systematically disadvantages students from underrepresented groups, students with disabilities, or students whose strengths don't align with a single assessment format, then your grades are measuring course design barriers as much as they're measuring student learning. That's worth examining honestly.
+What the Research Says
+Research in AERA Open examined learning outcomes across 11,868 students at multiple institutions and found that achievement gaps for underrepresented minority students and first-generation college students were reduced by up to 56% in diverse, inclusive learning environments compared to homogeneous ones (Bowman et al. 2023).
+Research on Universal Design for Learning consistently shows that courses designed with UDL principles benefit all students, not just those with identified disabilities. CAST released updated UDL Guidelines version 3.0 in July 2024, with a stronger emphasis on addressing systemic barriers and honoring learner identity (CAST 2024).
+Penn State's Student Disability Resources office reports that proactive accommodation — designing courses to be accessible from the start, rather than retrofitting them after a request — is both more effective and more equitable than reactive approaches.
+What This Looks Like in Practice
+An Astronomy instructor offers students the option to complete observational assignments using either NASA archive data or their own backyard observations documented with a smartphone — recognizing that students have vastly different access to equipment and dark skies.
+A Biology instructor offers a choice of assignment formats for one major project: a traditional written lab report, a narrated video presentation, or an annotated data visualization.
+A Biochemistry instructor provides supplementary materials for students who need to review foundational chemistry concepts — without making them mandatory for students who don't.
+A Chemistry instructor uses Penn State's Anthology Ally tool to ensure all course materials meet accessibility standards before the course begins.
+A Mathematics instructor includes closed captions on all recorded lectures and transcripts for audio content.
+A Physics instructor includes a proactive accommodations statement in the syllabus inviting students with disabilities to discuss their needs at the start of the semester.
+A Statistics instructor designs assessments using real-world datasets from a variety of cultural and geographic contexts.
+Reflection: What? So What? Now What?
+What? Think honestly about your course design.
+Who might be disadvantaged by the way your course is currently structured — by assignment format, deadline timing, or the accessibility of your materials?
+Are all of your course materials accessible to students with disabilities? Have you used Anthology Ally to audit your content?
+Does your course content reflect the diversity of scientists who have contributed to your discipline?
+So what? Course design is never neutral. Every structural choice either opens or closes a door for someone.
+Now what? Run Anthology Ally on your course materials before the next semester. It will show you exactly where the accessibility gaps are and how to fix them.
+Try This First
+Open Anthology Ally in your Canvas course and look at the accessibility scores on your course materials. Pick the three lowest-scoring files and follow Ally's step-by-step remediation guidance to improve them. This takes about 30 minutes and is one of the highest return investments you can make in your course.
+Actions: What You Can Do
+Design for accessibility from the start
+Use Anthology Ally to audit all course materials for accessibility before the course begins.
+Ensure all videos are captioned and all audio content has transcripts. Penn State's Kaltura platform provides automatic captioning.
+Ensure all PDFs are tagged for screen reader accessibility. Ally will flag untagged PDFs and walk you through the fix.
+Provide multiple pathways to demonstrate learning
+Offer alternative assignment formats for at least some major assignments.
+Use a variety of assessment types across the course — not just written exams and lab reports.
+Consider flexible deadline policies that acknowledge the reality of students' lives without compromising academic standards.
+Be proactive about accommodations
+Include a proactive accommodations statement in your syllabus inviting students with disabilities to discuss their needs at the start of the semester.
+Familiarize yourself with Penn State's Student Disability Resources.
+Reach out to the Grove Center if you need support designing accessible course materials.
+Resources
+UDL Guidelines 3.0 — CAST (2024)
+The Role of Minoritized Student Representation in Promoting Achievement and Equity Within College STEM Courses — Bowman et al., AERA Open (2023)
+Penn State Student Disability Resources
+Anthology Ally at Penn State
+Kaltura at Penn State — video hosting and captioning
+Universal Design for Learning Endorsement — World Campus Faculty Development, Penn State
+
+Reflective Practice 
+Why Reflection Matters
+The Seven Principles are not a checklist to complete once and file away. They're a set of lenses — ways of looking at your teaching practice, identifying what's working, and deciding what you want to change. The most effective online instructors are not those who've achieved perfection across all seven. They're the ones who reflect honestly, seek feedback from peers and students, and commit to continuous improvement.
+A simple framework worth using — and the same one that structures the reflection prompts throughout this guide: What? So What? Now What?
+What? What is actually happening in my course right now?
+So what? What does that mean for my students' learning?
+Now what? What is one specific thing I want to do differently?
+You don't need a formal process to use this. You need five minutes and a willingness to be honest with yourself.
+Benchmarking Your Practice
+Several national frameworks can help you measure your online teaching practice against established standards:
+OSCQR — A free, openly licensed rubric with 50 standards focused on learner-centered course design. Excellent for formative self-review.
+OLC Quality Course Teaching and Instructional Practice (QCTIP) — Focuses on teaching practice rather than course design alone.
+Quality Matters Higher Education Rubric — The most widely recognized quality assurance framework in online higher education.
+Peralta Online Equity Rubric — Focused on equity, inclusion, and humanizing the online learning experience.
+CVC-OEI Online Course Design Rubric — Comprehensive depth on accessibility and Universal Design for Learning.
+
+Ongoing Reflection Prompts
+Return to these questions at least once per semester:
+Where are your greatest strengths as an online science instructor? What evidence supports that?
+Where do you see the most significant opportunities for growth?
+How do you gather feedback from students about their experience? How do you use it?
+What resources or support would help you grow? Have you connected with the Digital Learning Group at the Grove Center?
+How has your online teaching practice evolved?
+The Peer Review Process for Online Teaching
+The Eberly College of Science peer review process for online teaching is designed to be supportive, not evaluative. It's a collegial conversation about teaching practice, grounded in the Seven Principles, focused on professional growth.
+The process involves four steps:
+Pairing. Contact Melissa Hicks at mjs100@psu.edu at least two weeks before the semester starts. A faculty peer will be identified to conduct the review. Reviewers are paired across departments to keep the focus on pedagogy rather than subject-matter expertise.
+Context. The course instructor completes the Instructor Input Form and shares it with the peer reviewer — providing context about the course's level, format, student population, and any particular challenges or innovations the instructor wants the reviewer to know about.
+Observation. The peer reviewer is granted TA role access to the Canvas course and uses this guide to observe how the instructor addresses each of the Seven Principles, noting strengths and areas for improvement.
+Summary. The peer reviewer summarizes their observations in a letter that can be included in the instructor's annual report or promotion and tenure dossier.
+For provisional faculty who are not yet tenured, peer reviews are recommended at least once per year and across a variety of courses. For faculty being reviewed for promotion, a series of reviews over time — demonstrating a trajectory of growth — is more valuable than several reviews clustered in the semester immediately before your review
+Resources and Support 
+The Grove Center for Excellence in Science Education
+Contact Melissa Hicks at mjs100@psu.edu for support with online learning, course design, or anything in this guide.
+Penn State University Resources
+Penn State Teaching and Learning with Technology (TLT)
+Penn State Schreyer Institute for Teaching Excellence
+Penn State Canvas Support
+Penn State Student Disability Resources
+Kaltura at Penn State
+Penn State Accessibility
+Penn State World Campus Faculty Resources
+Penn State University Policy AC23
+National Quality Frameworks
+Quality Matters Higher Education Rubric
+OSCQR
+OLC Quality Course Teaching and Instructional Practice
+Peralta Equity Rubric for Online Courses
+CVC-OEI Online Course Design Rubric
+
+References
+Akpen, C., D. Adom, E. Acheampong, and B. Asante. 2024. "Impact of Online Learning on Student Performance and Engagement: A Systematic Review." Discover Education. https://doi.org/10.1007/s44217-024-00253-0
+Bharadwaj, A., L. Dommert, J. Fain, and M. Thorn. 2024. "Time for Class 2024." Tyton Partners. https://tytonpartners.com/time-for-class-2024/
+Bowman, Nicholas, Christine Logel, Jessi Smith, Jaclyn Neel, and Mary C. Murphy. 2023. "The Role of Minoritized Student Representation in Promoting Achievement and Equity Within College STEM Courses." AERA Open. https://doi.org/10.1177/23328584231209957
+CAST. 2024. "UDL Guidelines 3.0." https://udlguidelines.cast.org/
+Chen, Ouhao, Fred Paas, and John Sweller. 2023. "A Cognitive Load Theory Approach to Defining and Measuring Task Complexity Through Element Interactivity." Educational Psychology Review. https://doi.org/10.1007/s10648-023-09782-w
+Chickering, Arthur W., and Zelda F. Gamson. 1987. "Seven Principles for Good Practice in Undergraduate Education." AAHE Bulletin 39: 3-7.
+Chim, J., D. Dolmans, M. oude Egbrink, and H. Savelberg. 2024. "Experiences of Face-to-Face and Online Collaborative Learning." Education and Information Technologies. https://doi.org/10.1007/s10639-024-12533-1
+Hill, Phil. 2025. "Fall 2023 IPEDS Data: Profile of US Higher Ed Online Education." On EdTech Newsletter. https://onedtech.philhillaa.com/
+Kerman, N., H. Kester, and P. Kirschner. 2024. "Online Peer Feedback in Higher Education: A Synthesis of the Literature." Education and Information Technologies. https://doi.org/10.1007/s10639-023-12273-8
+May, Dominik, Isa Jahnke, and Stephanie Moore. 2023. "Online Laboratories and Virtual Experimentation in Higher Education from a Sociotechnical-Pedagogical Design Perspective." Journal of Computing in Higher Education 35: 203-222. https://doi.org/10.1007/s12528-023-09380-3
+McNeill, L., and S. Bushaala. 2023. "Meaningful Connection in Virtual Classrooms." Frontiers in Education. https://doi.org/10.3389/feduc.2023.1271245
+Meng, Q., et al. 2024. "A Systematic Review of the Effectiveness of Online Learning in Higher Education." Frontiers in Education. https://doi.org/10.3389/feduc.2023.1334153
+Ortega-Ruiperez, B., and J. M. Correa-Gorospe. 2024. "Peer Assessment to Promote Self-Regulated Learning." Frontiers in Education. https://doi.org/10.3389/feduc.2024.1376505
+Richards, K., and B. M. W. Thompson. 2023. "Challenges and Instructor Strategies for Transitioning to Online Learning During and After the COVID-19 Pandemic." Frontiers in Communication 8. https://doi.org/10.3389/fcomm.2023.1101035
+University of Iowa. 2024. "Five Steps for Enhancing Instructor Presence in Online Courses." https://teachonline.uiowa.edu/news/2024/10/five-steps-enhancing-instructor-presence-online-courses
+Watson, S., C. Sullivan, and W. Watson. 2023. "Teaching Presence in Asynchronous Online Classes: It's Not Just a Facade." Online Learning Journal. https://doi.org/10.24059/olj.v27i2.3231
+
+	

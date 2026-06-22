@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;}
+    html,body{margin:0;padding:0;}
+    body{background:#F5F2EB;-webkit-font-smoothing:antialiased;}
+    textarea,input,button{font-family:'Roboto',sans-serif;}
+    textarea{resize:vertical;}
+    ::selection{background:#E98300;color:#fff;}
+    .app-scroll{scrollbar-width:thin;scrollbar-color:#CFC8B8 transparent;}
+    @media print{
+      [data-noprint]{display:none !important;}
+      body{background:#fff !important;}
+      .app-main{overflow:visible !important;max-height:none !important;}
+      .print-only{display:block !important;}
+    }
+    .print-only{display:none;}
+  </style>
+</helmet>
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" rx="20" fill="#001E44"></rect>
+    <circle cx="46" cy="44" r="17" fill="none" stroke="#E98300" stroke-width="6"></circle>
+    <line x1="58" y1="56" x2="72" y2="70" stroke="#E98300" stroke-width="6" stroke-linecap="round"></line>
+    <circle cx="46" cy="44" r="5" fill="#7FB04A"></circle>
+  </svg>
+</template>
+<div style="display:flex; min-height:100vh; font-family:'Roboto',sans-serif; color:#2B3645; background:#F5F2EB;">
+
+  <aside data-noprint="" class="app-scroll" style="width:300px; flex:none; position:sticky; top:0; height:100vh; overflow:auto; background:#001E44; color:#E7ECF3; display:flex; flex-direction:column;">
+    <div style="padding:30px 26px 22px;">
+      <div style="font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#8FA6C4; font-weight:600;">{{ collegeLabel }}</div>
+      <div style="font-family:'Roboto Slab',serif; font-size:25px; line-height:1.15; margin-top:9px; color:#fff;">Teaching Science Online</div>
+      <div style="font-size:13px; color:#9DB1CC; margin-top:5px;">A reflective faculty companion</div>
+    </div>
+
+    <div style="margin:4px 20px 18px; padding:16px 18px; background:rgba(255,255,255,0.055); border-radius:12px; display:flex; align-items:center; gap:14px;">
+      <div style="position:relative; width:54px; height:54px; flex:none;">
+        <svg width="54" height="54" viewBox="0 0 56 56">
+          <circle cx="28" cy="28" r="24" fill="none" stroke="rgba(255,255,255,0.16)" stroke-width="5"></circle>
+          <circle cx="28" cy="28" r="24" fill="none" stroke="#7FB04A" stroke-width="5" stroke-linecap="round" stroke-dasharray="{{ ringCirc }}" stroke-dashoffset="{{ ringOffset }}" transform="rotate(-90 28 28)" style="transition:stroke-dashoffset .7s cubic-bezier(.4,0,.2,1);"></circle>
+        </svg>
+        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:17px; font-weight:700; color:#fff;">{{ reviewedCount }}</div>
+      </div>
+      <div style="font-size:13px; line-height:1.4; color:#C2D0E4;">{{ reviewedCount }} of 7 principles<br>reviewed</div>
+    </div>
+
+    <nav style="padding:6px 14px 14px; flex:1;">
+      <button onClick="{{ goHome }}" style="{{ introNavStyle }}">
+        <span style="width:24px;flex:none;font-size:12px;color:#8FA6C4;font-weight:700;">◇</span>
+        <span>Introduction</span>
+      </button>
+
+      <div style="font-size:10px; letter-spacing:.15em; text-transform:uppercase; color:#6E83A3; font-weight:700; padding:16px 12px 8px;">The Seven Principles</div>
+
+      <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="7">
+        <button onClick="{{ item.go }}" style="{{ item.navStyle }}">
+          <span style="width:24px;flex:none;text-align:center;font-size:12.5px;font-weight:700;color:{{ item.numColor }};">{{ item.n }}</span>
+          <span style="flex:1;text-align:left;">{{ item.short }}</span>
+          <span style="width:9px;height:9px;border-radius:50%;flex:none;background:{{ item.dotColor }};"></span>
+        </button>
+      </sc-for>
+
+      <div style="height:1px;background:rgba(255,255,255,0.1);margin:16px 12px;"></div>
+
+      <button onClick="{{ goPeer }}" style="{{ peerNavStyle }}">
+        <span style="width:24px;flex:none;font-size:13px;color:#8FA6C4;">⇄</span>
+        <span style="flex:1;text-align:left;">Peer Review</span>
+      </button>
+
+      <a href="Peer Observation Partnerships.dc.html" style="display:flex; align-items:center; gap:4px; width:100%; box-sizing:border-box; text-decoration:none; color:#C2D0E4; font-size:14.5px; font-weight:500; padding:10px 12px; border-radius:9px;" style-hover="background:rgba(255,255,255,0.08);">
+        <span style="width:24px;flex:none;font-size:13px;color:#7FB04A;">◎</span>
+        <span style="flex:1;text-align:left;">Peer Observation</span>
+        <span style="font-size:11px;color:#7E92B0;">↗</span>
+      </a>
+
+      <button onClick="{{ goPlan }}" style="{{ planNavStyle }}">
+        <span style="width:24px;flex:none;font-size:13px;color:#F0A24E;">▤</span>
+        <span style="flex:1;text-align:left;">My Action Plan</span>
+        <span style="{{ planBadgeStyle }}">{{ planCount }}</span>
+      </button>
+    </nav>
+
+    <div style="padding:18px 26px 26px; font-size:11.5px; line-height:1.6; color:#7E92B0; border-top:1px solid rgba(255,255,255,0.08);">
+      The Grove Center for Excellence in Science Education · Support: Melissa Hicks, mjs100@psu.edu
+    </div>
+  </aside>
+
+  <main ref="{{ mainRef }}" class="app-main app-scroll" style="flex:1; min-width:0; max-height:100vh; overflow:auto;">
+
+    <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+      <div style="max-width:880px; margin:0 auto; padding:72px 56px 96px;">
+        <div style="font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:#9A8F76; font-weight:700;">A Guide to Effective Online Teaching</div>
+        <h1 style="font-family:'Roboto Slab',serif; font-weight:500; font-size:50px; line-height:1.08; letter-spacing:-0.01em; color:#001E44; margin:16px 0 0;">Your students are out there. Let's make sure they can feel you in the course.</h1>
+        <p style="font-size:19px; line-height:1.6; color:#4A5564; margin:22px 0 0; max-width:640px;">Seven research-backed principles, adapted for online science courses — with room to reflect honestly, a place to plan, and one small thing to try before your next module opens. This isn't a checklist for perfection. It's a set of lenses.</p>
+
+        <div style="margin:44px 0 0; background:#fff; border:1px solid #EAE4D8; border-left:4px solid #E98300; border-radius:12px; padding:30px 34px; box-shadow:0 1px 3px rgba(40,30,10,0.04);">
+          
+          <p style="font-family:'Roboto Slab',serif; font-size:21px; line-height:1.55; color:#26303C; margin:0;">Imagine a student in your Genetics course. She's at her kitchen table in Pittsburgh at 10:30 p.m. Her kids are finally asleep. She works full time. She hasn't been on a campus in years. She is genuinely trying to understand meiosis — and she is doing it completely alone.</p><p style="font-family:'Roboto Slab',serif; font-size:21px; line-height:1.55; color:#001E44; margin:14px 0 0; font-weight:500;">She's not an edge case. She's your student.</p>
+        </div>
+
+        <sc-if value="{{ showStats }}" hint-placeholder-val="{{ true }}">
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:40px 0 0;">
+          <div style="background:#fff;border:1px solid #EAE4D8;border-radius:12px;padding:22px 22px;">
+            <div style="font-family:'Roboto Slab',serif;font-size:38px;color:#1E407C;line-height:1;">54%</div>
+            <div style="font-size:14px;color:#5A6473;line-height:1.45;margin-top:9px;">of U.S. higher-ed students now take at least one online course</div>
+          </div>
+          <div style="background:#fff;border:1px solid #EAE4D8;border-radius:12px;padding:22px 22px;">
+            <div style="font-family:'Roboto Slab',serif;font-size:38px;color:#1E407C;line-height:1;">13,883</div>
+            <div style="font-size:14px;color:#5A6473;line-height:1.45;margin-top:9px;">World Campus students as of fall 2025</div>
+          </div>
+          <div style="background:#fff;border:1px solid #EAE4D8;border-radius:12px;padding:22px 22px;">
+            <div style="font-family:'Roboto Slab',serif;font-size:38px;color:#1E407C;line-height:1;">71%</div>
+            <div style="font-size:14px;color:#5A6473;line-height:1.45;margin-top:9px;">of those undergraduates study part-time — working adults, caregivers, first-gen learners</div>
+          </div>
+        </div>
+        </sc-if>
+
+        <div style="margin:56px 0 0;">
+          <div style="font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:#9A8F76; font-weight:700;">Three ways to use this companion</div>
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:18px 0 0;">
+            <div style="padding:4px 2px;">
+              <div style="font-family:'Roboto Slab',serif;color:#4A7729;font-size:22px;">Reflect</div>
+              <p style="font-size:14.5px;line-height:1.55;color:#566273;margin:6px 0 0;">Work through it on your own. Spot what's working and set goals for what you'll change.</p>
+            </div>
+            <div style="padding:4px 2px;">
+              <div style="font-family:'Roboto Slab',serif;color:#4A7729;font-size:22px;">Observe</div>
+              <p style="font-size:14.5px;line-height:1.55;color:#566273;margin:6px 0 0;">Use it as a shared framework when a colleague observes your course and offers feedback.</p>
+            </div>
+            <div style="padding:4px 2px;">
+              <div style="font-family:'Roboto Slab',serif;color:#4A7729;font-size:22px;">Document</div>
+              <p style="font-size:14.5px;line-height:1.55;color:#566273;margin:6px 0 0;">Build the basis of a peer-review letter for your annual report or P&amp;T dossier (Policy AC23).</p>
+            </div>
+          </div>
+          <button onClick="{{ goPeer }}" style="margin:18px 0 0; background:transparent; border:none; color:#1E407C; font-size:15px; font-weight:600; cursor:pointer; padding:0; font-family:'Roboto',sans-serif;">Explore peer review &amp; the Penn State review guide →</button>
+        </div>
+
+        <div style="margin:60px 0 0;">
+          <div style="font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:#9A8F76; font-weight:700;">The foundation · Chickering &amp; Gamson's Seven Principles</div>
+          <p style="font-size:16.5px;line-height:1.6;color:#4A5564;margin:12px 0 26px;max-width:660px;">In 1987, Chickering and Gamson synthesized 50 years of research on how college students learn. The seven principles that resulted matter <em>more</em> online, not less — because the structures the physical classroom used to provide for you are now absent. Pick any one to begin.</p>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+            <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="7">
+              <div onClick="{{ item.go }}" style="cursor:pointer; background:#fff; border:1px solid #EAE4D8; border-radius:12px; padding:22px 22px 20px; box-shadow:0 1px 2px rgba(40,30,10,0.03); transition:box-shadow .15s, transform .15s; position:relative;" style-hover="box-shadow:0 6px 20px rgba(0,30,68,0.10); transform:translateY(-2px);">
+                <div style="display:flex; align-items:center; justify-content:space-between;">
+                  <div style="font-family:'Roboto Slab',serif; font-size:15px; color:#1E407C; font-weight:600;">Principle {{ item.n }}</div>
+                  <span style="font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:{{ item.statusColor }};">{{ item.statusLabel }}</span>
+                </div>
+                <div style="font-family:'Roboto Slab',serif; font-size:21px; line-height:1.25; color:#001E44; margin:10px 0 0;">{{ item.q }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="margin:44px 0 0; display:flex; align-items:center; gap:18px; flex-wrap:wrap;">
+          <button onClick="{{ resumeGo }}" style="background:#1E407C; color:#fff; border:none; border-radius:9px; padding:15px 26px; font-size:16px; font-weight:600; cursor:pointer; box-shadow:0 2px 8px rgba(30,64,124,0.22);">{{ resumeLabel }}</button>
+          <span style="font-size:14.5px; color:#7C8492;">or choose any principle from the left.</span>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isPrinciple }}" hint-placeholder-val="{{ false }}">
+      <div style="max-width:820px; margin:0 auto; padding:60px 56px 100px;">
+        <div style="display:flex; align-items:center; gap:12px; font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:#9A8F76;">
+          <span>Principle {{ p.n }} of 7</span>
+          <span style="width:4px;height:4px;border-radius:50%;background:#C9C0AC;"></span>
+          <span style="color:#B3A88F;">{{ p.short }}</span>
+        </div>
+        <h1 style="font-family:'Roboto Slab',serif; font-weight:500; font-size:42px; line-height:1.12; letter-spacing:-0.01em; color:#001E44; margin:14px 0 0;">{{ p.q }}</h1>
+
+        <div style="margin:26px 0 0; border-left:3px solid #E98300; padding:4px 0 4px 22px;">
+          <p style="font-family:'Roboto Slab',serif; font-size:21px; line-height:1.5; color:#3A4350; margin:0;">“{{ p.quote }}”</p>
+          <div style="font-size:13.5px; color:#8A8270; margin-top:10px; letter-spacing:.02em;">— {{ p.by }}</div>
+        </div>
+
+        <div style="margin:46px 0 0;">
+          <div style="font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:#9A8F76; font-weight:700; margin-bottom:14px;">What this principle is asking</div>
+          <sc-for list="{{ p.asking }}" as="para" hint-placeholder-count="2">
+            <p style="font-size:17.5px; line-height:1.72; color:#3A4654; margin:0 0 16px;">{{ para }}</p>
+          </sc-for>
+        </div>
+
+        <div style="margin:34px 0 0; background:#EEF3FA; border:1px solid #D6E1F0; border-radius:14px; padding:28px 30px;">
+          <div style="font-family:'Roboto Slab',serif; font-size:22px; color:#001E44;">A quick self-check</div>
+          <p style="font-size:14.5px; color:#5A6679; margin:6px 0 20px;">No grades, nothing recorded. Just an honest gut check on where things stand right now.</p>
+          <sc-for list="{{ p.diagnostics }}" as="d" hint-placeholder-count="3">
+            <div style="margin:0 0 18px;">
+              <div style="font-size:16px; color:#2B3645; line-height:1.45; margin-bottom:10px; font-weight:500;">{{ d.q }}</div>
+              <div style="display:flex; gap:9px;">
+                <sc-for list="{{ d.options }}" as="o" hint-placeholder-count="3">
+                  <button onClick="{{ o.onClick }}" style="{{ o.style }}">{{ o.label }}</button>
+                </sc-for>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+
+        <sc-if value="{{ showResearch }}" hint-placeholder-val="{{ true }}">
+        <div style="margin:48px 0 0;">
+          <div style="font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:#4A7729; font-weight:700; margin-bottom:16px;">What the research says</div>
+          <sc-for list="{{ p.research }}" as="r" hint-placeholder-count="3">
+            <div style="display:flex; gap:16px; margin:0 0 16px; background:#fff; border:1px solid #E6E8DD; border-left:3px solid #4A7729; border-radius:10px; padding:18px 22px;">
+              <div style="flex:1;">
+                <p style="font-size:16.5px; line-height:1.62; color:#384350; margin:0;">{{ r.t }}</p>
+                <div style="font-size:13px; color:#7E8B6E; margin-top:9px; font-style:italic;">{{ r.c }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        </sc-if>
+
+        <div style="margin:48px 0 0;">
+          <div style="font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:#9A8F76; font-weight:700; margin-bottom:8px;">What this looks like in practice</div>
+          <p style="font-size:14.5px; color:#6B7585; margin:0 0 16px;">Examples from across the college. Filter by discipline — take them as starting points, not scripts.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px;">
+            <sc-for list="{{ p.chips }}" as="c" hint-placeholder-count="6">
+              <button onClick="{{ c.onClick }}" style="{{ c.style }}">{{ c.label }}</button>
+            </sc-for>
+          </div>
+          <sc-for list="{{ p.practiceShown }}" as="ex" hint-placeholder-count="5">
+            <div style="display:flex; gap:18px; align-items:baseline; padding:15px 0; border-bottom:1px solid #ECE7DB;">
+              <div style="flex:none; width:104px; font-size:12.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:#1E407C;">{{ ex.d }}</div>
+              <div style="flex:1; font-size:16.5px; line-height:1.6; color:#3A4654;">{{ ex.t }}</div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="margin:50px 0 0; background:#fff; border:1px solid #EAE4D8; border-radius:14px; padding:30px 32px;">
+          <div style="font-family:'Roboto Slab',serif; font-size:24px; color:#001E44;">Reflect: What? So what? Now what?</div>
+          <p style="font-size:14.5px; color:#5A6473; margin:8px 0 6px;">Your answers save automatically in this browser and flow into your action plan. Honest beats polished.</p>
+
+          <div style="margin:20px 0 4px; font-size:13.5px; color:#6B7585; line-height:1.6; background:#F7F4EC; border-radius:9px; padding:14px 18px;">
+            <span style="font-weight:600; color:#4A5564;">Consider:</span>
+            <sc-for list="{{ p.guiding }}" as="g" hint-placeholder-count="3"><span> {{ g }} · </span></sc-for>
+          </div>
+
+          <div style="margin:20px 0 0;">
+            <label style="display:block; font-size:14px; font-weight:700; color:#1E407C; margin-bottom:7px;">What? <span style="font-weight:400;color:#8A93A1;">— what's actually happening in my course right now?</span></label>
+            <textarea value="{{ p.reflWhat }}" onChange="{{ p.onWhat }}" placeholder="Describe the current reality, without judgment…" style="width:100%; min-height:74px; padding:12px 14px; font-size:15.5px; line-height:1.55; color:#2B3645; border:1.5px solid #E1DCCF; border-radius:9px; background:#FCFBF7;" style-focus="border-color:#1E407C; outline:none;"></textarea>
+          </div>
+          <div style="margin:16px 0 0;">
+            <label style="display:block; font-size:14px; font-weight:700; color:#1E407C; margin-bottom:7px;">So what? <span style="font-weight:400;color:#8A93A1;">— what does that mean for my students' learning?</span></label>
+            <textarea value="{{ p.reflSo }}" onChange="{{ p.onSo }}" placeholder="Why does this matter? Who is affected?…" style="width:100%; min-height:74px; padding:12px 14px; font-size:15.5px; line-height:1.55; color:#2B3645; border:1.5px solid #E1DCCF; border-radius:9px; background:#FCFBF7;" style-focus="border-color:#1E407C; outline:none;"></textarea>
+          </div>
+          <div style="margin:16px 0 0;">
+            <label style="display:block; font-size:14px; font-weight:700; color:#1E407C; margin-bottom:7px;">Now what? <span style="font-weight:400;color:#8A93A1;">— one specific thing I want to do differently?</span></label>
+            <textarea value="{{ p.reflNow }}" onChange="{{ p.onNow }}" placeholder="Make it concrete and small enough to actually do…" style="width:100%; min-height:74px; padding:12px 14px; font-size:15.5px; line-height:1.55; color:#2B3645; border:1.5px solid #E1DCCF; border-radius:9px; background:#FCFBF7;" style-focus="border-color:#1E407C; outline:none;"></textarea>
+          </div>
+        </div>
+
+        <div style="margin:30px 0 0; background:#FCF1E2; border:1px solid #F3D9B6; border-radius:14px; padding:28px 32px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span style="font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#C2741A; background:#fff; border:1px solid #F0CFA3; padding:4px 10px; border-radius:999px;">Try this first</span>
+          </div>
+          <p style="font-size:18px; line-height:1.62; color:#5A3D17; margin:16px 0 20px;">{{ p.tryThis }}</p>
+          <button onClick="{{ p.toggleCommit }}" style="{{ p.commitStyle }}">{{ p.commitLabel }}</button>
+        </div>
+
+        <div style="margin:48px 0 0;">
+          <div style="font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:#9A8F76; font-weight:700; margin-bottom:6px;">Actions you can take</div>
+          <p style="font-size:14.5px; color:#6B7585; margin:0 0 18px;">Check anything you want to commit to — it lands in your action plan.</p>
+          <sc-for list="{{ p.actionGroups }}" as="grp" hint-placeholder-count="3">
+            <div style="margin:0 0 22px;">
+              <div style="font-size:15px; font-weight:700; color:#1E407C; margin-bottom:6px;">{{ grp.title }}</div>
+              <sc-for list="{{ grp.items }}" as="a" hint-placeholder-count="3">
+                <div onClick="{{ a.toggle }}" style="display:flex; gap:13px; align-items:flex-start; cursor:pointer; padding:9px 0;">
+                  <span style="{{ a.boxStyle }}"><sc-if value="{{ a.checked }}" hint-placeholder-val="{{ false }}"><span style="color:#fff;font-size:13px;line-height:1;font-weight:700;">✓</span></sc-if></span>
+                  <span style="flex:1; font-size:16px; color:#3A4654; line-height:1.5;">{{ a.label }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="margin:40px 0 0;">
+          <div style="font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:#9A8F76; font-weight:700; margin-bottom:12px;">Resources</div>
+          <sc-for list="{{ p.resources }}" as="rs" hint-placeholder-count="3">
+            <div style="padding:11px 0; border-bottom:1px solid #ECE7DB;">
+              <a href="{{ rs.u }}" target="_blank" rel="noopener" style="font-size:15.5px; color:#1E407C; font-weight:600; text-decoration:none; border-bottom:1px solid rgba(30,64,124,0.3);" style-hover="border-bottom-color:#1E407C;">{{ rs.t }} ↗</a>
+              <span style="font-size:14px; color:#8A8270;">  —  {{ rs.c }}</span>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="margin:46px 0 0; display:flex; align-items:center; justify-content:space-between; gap:16px; border-top:1px solid #E4DECF; padding-top:28px; flex-wrap:wrap;">
+          <button onClick="{{ p.toggleReviewed }}" style="{{ p.reviewedStyle }}">{{ p.reviewedLabel }}</button>
+          <div style="display:flex; gap:10px;">
+            <sc-if value="{{ p.hasPrev }}" hint-placeholder-val="{{ false }}">
+              <button onClick="{{ p.prevGo }}" style="background:#fff; border:1px solid #D8D2C4; color:#1E407C; border-radius:8px; padding:11px 18px; font-size:14.5px; font-weight:600; cursor:pointer;">← Previous</button>
+            </sc-if>
+            <sc-if value="{{ p.hasNext }}" hint-placeholder-val="{{ true }}">
+              <button onClick="{{ p.nextGo }}" style="background:#1E407C; border:none; color:#fff; border-radius:8px; padding:11px 18px; font-size:14.5px; font-weight:600; cursor:pointer;">Next principle →</button>
+            </sc-if>
+            <sc-if value="{{ p.isLast }}" hint-placeholder-val="{{ false }}">
+              <button onClick="{{ goPlan }}" style="background:#4A7729; border:none; color:#fff; border-radius:8px; padding:11px 18px; font-size:14.5px; font-weight:600; cursor:pointer;">View my action plan →</button>
+            </sc-if>
+          </div>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isPlan }}" hint-placeholder-val="{{ false }}">
+      <div style="max-width:820px; margin:0 auto; padding:60px 56px 100px;">
+        <div class="print-only" style="margin-bottom:24px;">
+          <div style="font-family:'Roboto Slab',serif;font-size:22px;color:#001E44;">{{ collegeLabel }} · Online Teaching Action Plan</div>
+        </div>
+        <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+          <div>
+            <div style="font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:#9A8F76; font-weight:700;">{{ collegeLabel }}</div>
+            <h1 style="font-family:'Roboto Slab',serif; font-weight:500; font-size:42px; line-height:1.1; color:#001E44; margin:12px 0 0;">My Action Plan</h1>
+            <p style="font-size:16.5px; color:#566273; margin:12px 0 0; max-width:560px;">Everything you've committed to, checked off, and reflected on — gathered in one place. Print it or save it as a PDF for your records or a peer-review conversation.</p>
+          </div>
+          <button data-noprint="" onClick="{{ printPlan }}" style="flex:none; background:#1E407C; color:#fff; border:none; border-radius:9px; padding:13px 22px; font-size:15px; font-weight:600; cursor:pointer; box-shadow:0 2px 8px rgba(30,64,124,0.2);">Print / Save as PDF</button>
+        </div>
+
+        <div data-noprint="" style="margin:26px 0 0; display:flex; gap:14px; align-items:center; flex-wrap:wrap;">
+          <label style="font-size:13.5px; color:#6B7585; font-weight:600;">Prepared by</label>
+          <input value="{{ planName }}" onChange="{{ onName }}" placeholder="Your name" style="flex:1; min-width:200px; max-width:340px; padding:10px 14px; font-size:15px; color:#2B3645; border:1.5px solid #E1DCCF; border-radius:8px; background:#FCFBF7;" style-focus="border-color:#1E407C;outline:none;">
+          <span style="font-size:13.5px; color:#8A8270;">{{ today }}</span>
+        </div>
+        <div class="print-only" style="font-size:14px;color:#566273;margin-top:10px;">Prepared by {{ planName }} · {{ today }} · {{ reviewedCount }} of 7 principles reviewed</div>
+
+        <sc-if value="{{ planEmpty }}" hint-placeholder-val="{{ true }}">
+          <div style="margin:40px 0 0; background:#fff; border:1px dashed #D8D2C4; border-radius:14px; padding:48px 36px; text-align:center;">
+            <div style="font-family:'Roboto Slab',serif; font-size:23px; color:#001E44;">Nothing here yet — and that's fine.</div>
+            <p style="font-size:16px; color:#6B7585; margin:10px auto 22px; max-width:440px; line-height:1.6;">Open any principle, react to a self-check, jot a reflection, or commit to one small thing. It'll all show up here, ready to print.</p>
+            <button onClick="{{ resumeGo }}" style="background:#1E407C; color:#fff; border:none; border-radius:9px; padding:13px 24px; font-size:15px; font-weight:600; cursor:pointer;">{{ resumeLabel }}</button>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ planHasCommit }}" hint-placeholder-val="{{ false }}">
+          <div style="margin:42px 0 0;">
+            <div style="font-family:'Roboto Slab',serif; font-size:25px; color:#001E44; margin-bottom:4px;">Things I'll try first</div>
+            <div style="width:46px; height:3px; background:#E98300; border-radius:2px; margin-bottom:18px;"></div>
+            <sc-for list="{{ planCommitments }}" as="c" hint-placeholder-count="2">
+              <div style="background:#fff; border:1px solid #EAE4D8; border-left:4px solid #E98300; border-radius:12px; padding:20px 24px; margin:0 0 14px;">
+                <div style="font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:#C2741A; font-weight:700;">Principle {{ c.n }} · {{ c.short }}</div>
+                <p style="font-size:16.5px; line-height:1.58; color:#3A4654; margin:9px 0 16px;">{{ c.text }}</p>
+                <div style="display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+                  <div onClick="{{ c.toggleDone }}" data-noprint="" style="display:flex; align-items:center; gap:9px; cursor:pointer;">
+                    <span style="{{ c.boxStyle }}"><sc-if value="{{ c.done }}" hint-placeholder-val="{{ false }}"><span style="color:#fff;font-size:12px;font-weight:700;">✓</span></sc-if></span>
+                    <span style="font-size:14.5px; color:#566273; font-weight:600;">{{ c.doneLabel }}</span>
+                  </div>
+                  <div style="display:flex; align-items:center; gap:8px;">
+                    <span style="font-size:13.5px; color:#8A8270; font-weight:600;">By when:</span>
+                    <input type="date" value="{{ c.date }}" onChange="{{ c.setDate }}" data-noprint="" style="padding:7px 10px; font-size:14px; color:#2B3645; border:1.5px solid #E1DCCF; border-radius:7px; background:#FCFBF7;">
+                    <span class="print-only" style="font-size:14px;color:#3A4654;">{{ c.dateDisplay }}</span>
+                  </div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ planHasActions }}" hint-placeholder-val="{{ false }}">
+          <div style="margin:42px 0 0;">
+            <div style="font-family:'Roboto Slab',serif; font-size:25px; color:#001E44; margin-bottom:4px;">Actions I've committed to</div>
+            <div style="width:46px; height:3px; background:#4A7729; border-radius:2px; margin-bottom:18px;"></div>
+            <sc-for list="{{ planActions }}" as="grp" hint-placeholder-count="3">
+              <div style="margin:0 0 18px;">
+                <div style="font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:#1E407C; font-weight:700; margin-bottom:8px;">Principle {{ grp.n }} · {{ grp.short }}</div>
+                <sc-for list="{{ grp.items }}" as="it" hint-placeholder-count="3">
+                  <div style="display:flex; gap:11px; align-items:flex-start; padding:6px 0;">
+                    <span style="flex:none; width:18px; height:18px; border-radius:5px; background:#4A7729; display:flex; align-items:center; justify-content:center; margin-top:2px;"><span style="color:#fff;font-size:11px;font-weight:700;">✓</span></span>
+                    <span style="flex:1; font-size:16px; color:#3A4654; line-height:1.5;">{{ it }}</span>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ planHasRefl }}" hint-placeholder-val="{{ false }}">
+          <div style="margin:42px 0 0;">
+            <div style="font-family:'Roboto Slab',serif; font-size:25px; color:#001E44; margin-bottom:4px;">My reflections</div>
+            <div style="width:46px; height:3px; background:#1E407C; border-radius:2px; margin-bottom:18px;"></div>
+            <sc-for list="{{ planReflections }}" as="rf" hint-placeholder-count="3">
+              <div style="background:#fff; border:1px solid #EAE4D8; border-radius:12px; padding:22px 26px; margin:0 0 14px;">
+                <div style="font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:#1E407C; font-weight:700; margin-bottom:12px;">Principle {{ rf.n }} · {{ rf.short }}</div>
+                <sc-if value="{{ rf.hasWhat }}" hint-placeholder-val="{{ false }}"><div style="margin-bottom:12px;"><div style="font-size:13px;font-weight:700;color:#8A8270;text-transform:uppercase;letter-spacing:.06em;">What?</div><p style="font-size:16px;line-height:1.6;color:#3A4654;margin:4px 0 0;">{{ rf.what }}</p></div></sc-if>
+                <sc-if value="{{ rf.hasSo }}" hint-placeholder-val="{{ false }}"><div style="margin-bottom:12px;"><div style="font-size:13px;font-weight:700;color:#8A8270;text-transform:uppercase;letter-spacing:.06em;">So what?</div><p style="font-size:16px;line-height:1.6;color:#3A4654;margin:4px 0 0;">{{ rf.sowhat }}</p></div></sc-if>
+                <sc-if value="{{ rf.hasNow }}" hint-placeholder-val="{{ false }}"><div><div style="font-size:13px;font-weight:700;color:#C2741A;text-transform:uppercase;letter-spacing:.06em;">Now what?</div><p style="font-size:16px;line-height:1.6;color:#3A4654;margin:4px 0 0;">{{ rf.nowwhat }}</p></div></sc-if>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isPeer }}" hint-placeholder-val="{{ false }}">
+      <div style="max-width:820px; margin:0 auto; padding:60px 56px 100px;">
+        <div style="font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:#9A8F76; font-weight:700;">Observe · Document</div>
+        <h1 style="font-family:'Roboto Slab',serif; font-weight:500; font-size:44px; line-height:1.1; letter-spacing:-0.01em; color:#001E44; margin:14px 0 0;">Peer review of online teaching</h1>
+        <p style="font-size:19px; line-height:1.6; color:#4A5564; margin:18px 0 0; max-width:660px;">The seven principles in this companion aren't only a lens for your own reflection — they're the shared framework Penn State uses to review online teaching. Peer review of teaching, like peer review of research, is a recognized way to promote and document quality, and it's required for promotion and tenure.</p>
+
+        <div style="margin:28px 0 0; background:#fff; border:1px solid #EAE4D8; border-left:4px solid #4A7729; border-radius:12px; padding:22px 26px;">
+          <div style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:#4A7729; font-weight:700;">Looking for something lower-stakes?</div>
+          <p style="font-size:16px; line-height:1.6; color:#3A4654; margin:8px 0 14px;">This page is the <strong>formal, summative</strong> review that goes in your annual report or P&amp;T dossier. If you'd rather have a <strong>voluntary, confidential</strong> observation partnership — for your own reflection, never sent to anyone — that's a separate resource, and it covers both online <em>and</em> face-to-face courses.</p>
+          <a href="Peer Observation Partnerships.dc.html" style="font-size:15px; color:#1E407C; font-weight:600; text-decoration:none; border-bottom:1px solid rgba(30,64,124,0.3);">Explore Peer Observation Partnerships →</a>
+        </div>
+
+        <div style="margin:36px 0 0; background:#EEF3FA; border:1px solid #D6E1F0; border-radius:14px; padding:26px 30px;">
+          <p style="font-size:16.5px; line-height:1.65; color:#384350; margin:0;">The instrument below — the <em>Peer Review Guide for Online Teaching at Penn State</em> — was developed by Ann Taylor at the John A. Dutton Institute (College of Earth and Mineral Sciences), built on the same Seven Principles, and approved for University-wide use by the Penn State Online Coordinating Council. This companion is adapted from that work.</p>
+        </div>
+
+        <div style="margin:48px 0 0;">
+          <div style="font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:#9A8F76; font-weight:700; margin-bottom:18px;">Three ways to use it</div>
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px;">
+            <div style="background:#fff; border:1px solid #EAE4D8; border-top:3px solid #4A7729; border-radius:12px; padding:20px 22px;">
+              <div style="font-family:'Roboto Slab',serif; font-size:19px; color:#001E44;">Formal review</div>
+              <p style="font-size:14.5px; line-height:1.55; color:#566273; margin:8px 0 0;">A colleague reviews your course and summarizes their observations in a letter for your annual review or P&amp;T dossier (Policy AC23).</p>
+            </div>
+            <div style="background:#fff; border:1px solid #EAE4D8; border-top:3px solid #1E407C; border-radius:12px; padding:20px 22px;">
+              <div style="font-family:'Roboto Slab',serif; font-size:19px; color:#001E44;">Informal review</div>
+              <p style="font-size:14.5px; line-height:1.55; color:#566273; margin:8px 0 0;">Ask a trusted colleague to give you low-stakes feedback on one part of your teaching you're actively working on.</p>
+            </div>
+            <div style="background:#fff; border:1px solid #EAE4D8; border-top:3px solid #E98300; border-radius:12px; padding:20px 22px;">
+              <div style="font-family:'Roboto Slab',serif; font-size:19px; color:#001E44;">Self-review</div>
+              <p style="font-size:14.5px; line-height:1.55; color:#566273; margin:8px 0 0;">Use it on your own course to see clearly what you're shooting for — exactly what you've been doing in this companion.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin:50px 0 0;">
+          <div style="font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:#9A8F76; font-weight:700; margin-bottom:18px;">How a formal review works</div>
+          <sc-for list="{{ peerSteps }}" as="st" hint-placeholder-count="3">
+            <div style="display:flex; gap:20px; align-items:flex-start; padding:0 0 24px;">
+              <div style="flex:none; width:38px; height:38px; border-radius:50%; background:#001E44; color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Roboto Slab',serif; font-size:18px;">{{ st.n }}</div>
+              <div style="flex:1; padding-top:3px;">
+                <div style="font-size:18px; font-weight:600; color:#1E407C;">{{ st.t }}</div>
+                <p style="font-size:16px; line-height:1.6; color:#3A4654; margin:6px 0 0;">{{ st.d }}</p>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="margin:34px 0 0;">
+          <div style="font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:#4A7729; font-weight:700; margin-bottom:6px;">The instruments</div>
+          <p style="font-size:14.5px; color:#6B7585; margin:0 0 18px;">From the Dutton Institute — free to download and customize. Word files open in a new tab.</p>
+          <sc-for list="{{ peerDocs }}" as="d" hint-placeholder-count="5">
+            <a href="{{ d.u }}" target="_blank" rel="noopener" style="display:flex; gap:16px; align-items:center; text-decoration:none; background:#fff; border:1px solid #EAE4D8; border-radius:11px; padding:16px 20px; margin:0 0 11px;" style-hover="border-color:#1E407C; box-shadow:0 4px 14px rgba(0,30,68,0.08);">
+              <span style="flex:none; font-size:11px; font-weight:700; letter-spacing:.05em; color:#fff; background:{{ d.tagColor }}; padding:5px 9px; border-radius:6px;">{{ d.tag }}</span>
+              <span style="flex:1;">
+                <span style="display:block; font-size:16.5px; font-weight:600; color:#1E407C;">{{ d.t }} ↗</span>
+                <span style="display:block; font-size:14px; color:#7E8470; margin-top:3px;">{{ d.c }}</span>
+              </span>
+            </a>
+          </sc-for>
+        </div>
+
+        <div style="margin:30px 0 0; background:#FCF1E2; border:1px solid #F3D9B6; border-radius:14px; padding:24px 28px;">
+          <p style="font-size:15.5px; line-height:1.62; color:#5A3D17; margin:0;">These materials are shared under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener" style="color:#B5651A; font-weight:600;">Creative Commons BY-NC-SA 4.0 license</a>. Questions about the peer-review process go to Ann Taylor, Director of the Dutton Institute (atb3@psu.edu); questions about using this companion at Eberly go to Melissa Hicks (mjs100@psu.edu).</p>
+        </div>
+
+        <div style="margin:40px 0 0; display:flex; align-items:center; gap:16px; flex-wrap:wrap; border-top:1px solid #E4DECF; padding-top:28px;">
+          <button onClick="{{ goPlan }}" style="background:#1E407C; color:#fff; border:none; border-radius:9px; padding:13px 24px; font-size:15px; font-weight:600; cursor:pointer;">Build your action plan first →</button>
+          <span style="font-size:14.5px; color:#7C8492;">Your reflections make great talking points for a review conversation.</span>
+        </div>
+      </div>
+    </sc-if>
+
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;collegeLabel&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Penn State Eberly College of Science&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;showStats&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;showResearch&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this.KEY = "ecos-online-companion-v1";
+    let saved = {};
+    try { saved = JSON.parse(localStorage.getItem(this.KEY)) || {}; } catch(e){}
+    const base = { reviewed:{}, diag:{}, refl:{}, checked:{}, commit:{}, discipline:{}, name:"" };
+    this.state = { view:"home", pid:null, data:Object.assign(base, saved) };
+    this.mainRef = React.createRef();
+    this.content = this.buildContent();
+  }
+
+  persist(data){ try { localStorage.setItem(this.KEY, JSON.stringify(data)); } catch(e){} }
+  update(mut){ const data = JSON.parse(JSON.stringify(this.state.data)); mut(data); this.setState({data}); this.persist(data); }
+  toTop(){ setTimeout(()=>{ if(this.mainRef.current) this.mainRef.current.scrollTop = 0; }, 0); }
+
+  goHome(){ this.setState({view:"home", pid:null}); this.toTop(); }
+  goPrinciple(n){ this.setState({view:"principle", pid:n}); this.toTop(); }
+  goPlan(){ this.setState({view:"plan"}); this.toTop(); }
+  goPeer(){ this.setState({view:"peer"}); this.toTop(); }
+
+  setDiag(pid,i,v){ this.update(d=>{ d.diag[pid]=d.diag[pid]||{}; d.diag[pid][i]= (d.diag[pid][i]===v? null : v); }); }
+  setRefl(pid,f,v){ this.update(d=>{ d.refl[pid]=d.refl[pid]||{}; d.refl[pid][f]=v; }); }
+  toggleCheck(pid,key){ this.update(d=>{ d.checked[key]=!d.checked[key]; }); }
+  toggleCommit(pid){ this.update(d=>{ const c=d.commit[pid]||{}; c.on=!c.on; d.commit[pid]=c; }); }
+  toggleCommitDone(pid){ this.update(d=>{ const c=d.commit[pid]||{}; c.done=!c.done; d.commit[pid]=c; }); }
+  setCommitDate(pid,v){ this.update(d=>{ const c=d.commit[pid]||{}; c.date=v; d.commit[pid]=c; }); }
+  setDiscipline(pid,v){ this.update(d=>{ d.discipline[pid]=v; }); }
+  toggleReviewed(pid){ this.update(d=>{ d.reviewed[pid]=!d.reviewed[pid]; }); }
+  setName(v){ this.update(d=>{ d.name=v; }); }
+
+  isStarted(pid){
+    const d=this.state.data;
+    const r=d.refl[pid]; if(r&&(r.what||r.sowhat||r.nowwhat)) return true;
+    if(d.diag[pid] && Object.keys(d.diag[pid]).some(k=>d.diag[pid][k])) return true;
+    if(d.commit[pid] && d.commit[pid].on) return true;
+    if(Object.keys(d.checked).some(k=>k.indexOf(pid+"|")===0 && d.checked[k])) return true;
+    return false;
+  }
+
+  fmtDate(s){ if(!s) return "—"; try{ const [y,m,dd]=s.split("-"); return new Date(y,m-1,dd).toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"}); }catch(e){ return s; } }
+
+  buildPrinciple(pid){
+    const c=this.content[pid-1], d=this.state.data;
+    const optBase={flex:"1",textAlign:"center",padding:"9px 6px",borderRadius:"7px",fontSize:"13.5px",fontWeight:600,cursor:"pointer",transition:"all .12s",fontFamily:"'Roboto',sans-serif"};
+    const diagnostics=c.diag.map((q,i)=>({
+      q,
+      options:["Yes","In between","Not yet"].map(opt=>{
+        const sel=(d.diag[pid]||{})[i]===opt;
+        return { label:opt, onClick:()=>this.setDiag(pid,i,opt),
+          style:Object.assign({},optBase,{ border:"1.5px solid "+(sel?"#1E407C":"#CDD8E6"), background:sel?"#1E407C":"#fff", color:sel?"#fff":"#42526B" }) };
+      })
+    }));
+    const ds=[]; c.practice.forEach(p=>{ if(ds.indexOf(p.d)<0) ds.push(p.d); });
+    const cur=d.discipline[pid]||"All";
+    const chips=["All"].concat(ds).map(lbl=>{ const on=cur===lbl; return { label:lbl, onClick:()=>this.setDiscipline(pid,lbl),
+      style:{ padding:"7px 14px", borderRadius:"999px", fontSize:"13px", fontWeight:600, cursor:"pointer", transition:"all .12s", border:"1px solid "+(on?"#001E44":"#E0DACE"), background:on?"#001E44":"#fff", color:on?"#fff":"#5A6473", fontFamily:"'Roboto',sans-serif" } }; });
+    const practiceShown = cur==="All"? c.practice : c.practice.filter(p=>p.d===cur);
+    const r=d.refl[pid]||{};
+    const cm=d.commit[pid]||{};
+    const committed=!!cm.on;
+    const commitStyle = committed
+      ? { background:"#fff", color:"#B5651A", border:"1.5px solid #E98300", borderRadius:"9px", padding:"13px 22px", fontSize:"15px", fontWeight:600, cursor:"pointer" }
+      : { background:"#E98300", color:"#fff", border:"none", borderRadius:"9px", padding:"14px 24px", fontSize:"15px", fontWeight:600, cursor:"pointer", boxShadow:"0 2px 8px rgba(233,131,0,0.25)" };
+    const actionGroups=c.actions.map((g,gi)=>({
+      title:g.g,
+      items:g.items.map((label,ii)=>{ const key=pid+"|"+gi+"|"+ii; const checked=!!d.checked[key];
+        return { label, checked, toggle:()=>this.toggleCheck(pid,key),
+          boxStyle:{ width:"20px", height:"20px", borderRadius:"5px", flex:"none", display:"flex", alignItems:"center", justifyContent:"center", marginTop:"2px", transition:"all .12s", background:checked?"#4A7729":"#fff", border:"1.5px solid "+(checked?"#4A7729":"#C7C0B2") } };
+      })
+    }));
+    const reviewed=!!d.reviewed[pid];
+    const reviewedStyle = reviewed
+      ? { background:"#4A7729", color:"#fff", border:"none", borderRadius:"8px", padding:"11px 20px", fontSize:"14.5px", fontWeight:600, cursor:"pointer" }
+      : { background:"#fff", color:"#4A7729", border:"1.5px solid #4A7729", borderRadius:"8px", padding:"11px 20px", fontSize:"14.5px", fontWeight:600, cursor:"pointer" };
+    return {
+      n:c.n, short:c.short, q:c.q, quote:c.quote, by:c.by, asking:c.asking, guiding:c.reflWhat,
+      diagnostics, research:c.research, chips, practiceShown, resources:c.res, tryThis:c.tryThis,
+      reflWhat:r.what||"", reflSo:r.sowhat||"", reflNow:r.nowwhat||"",
+      onWhat:e=>this.setRefl(pid,"what",e.target.value),
+      onSo:e=>this.setRefl(pid,"sowhat",e.target.value),
+      onNow:e=>this.setRefl(pid,"nowwhat",e.target.value),
+      committed, toggleCommit:()=>this.toggleCommit(pid), commitStyle,
+      commitLabel: committed? "✓ Added to your plan — tap to remove" : "Add this to my action plan",
+      actionGroups, reviewed, toggleReviewed:()=>this.toggleReviewed(pid), reviewedStyle,
+      reviewedLabel: reviewed? "✓ Reviewed" : "Mark this principle as reviewed",
+      hasPrev: pid>1, hasNext: pid<7, isLast: pid===7,
+      prevGo: pid>1? ()=>this.goPrinciple(pid-1):null,
+      nextGo: pid<7? ()=>this.goPrinciple(pid+1):null
+    };
+  }
+
+  buildPlan(){
+    const d=this.state.data, C=this.content;
+    const commitments=[]; const actions=[]; const reflections=[];
+    for(let pid=1; pid<=7; pid++){
+      const c=C[pid-1];
+      const cm=d.commit[pid]||{};
+      if(cm.on){ commitments.push({ n:pid, short:c.short, text:c.tryThis, done:!!cm.done, doneLabel: cm.done?"Done":"Mark done", toggleDone:()=>this.toggleCommitDone(pid), date:cm.date||"", dateDisplay:this.fmtDate(cm.date), setDate:e=>this.setCommitDate(pid,e.target.value),
+        boxStyle:{ width:"19px", height:"19px", borderRadius:"5px", display:"flex", alignItems:"center", justifyContent:"center", background:cm.done?"#4A7729":"#fff", border:"1.5px solid "+(cm.done?"#4A7729":"#C7C0B2") } }); }
+      const items=[];
+      c.actions.forEach((g,gi)=>{ g.items.forEach((label,ii)=>{ if(d.checked[pid+"|"+gi+"|"+ii]) items.push(label); }); });
+      if(items.length) actions.push({ n:pid, short:c.short, items });
+      const r=d.refl[pid]||{};
+      if(r.what||r.sowhat||r.nowwhat) reflections.push({ n:pid, short:c.short, what:r.what||"", sowhat:r.sowhat||"", nowwhat:r.nowwhat||"", hasWhat:!!r.what, hasSo:!!r.sowhat, hasNow:!!r.nowwhat });
+    }
+    return { commitments, actions, reflections };
+  }
+
+  renderVals(){
+    const d=this.state.data, view=this.state.view, pid=this.state.pid;
+    const collegeLabel = this.props.collegeLabel || "Penn State Eberly College of Science";
+    const showStats = this.props.showStats !== false;
+    const showResearch = this.props.showResearch !== false;
+    const reviewedCount = Object.keys(d.reviewed).filter(k=>d.reviewed[k]).length;
+    const C=2*Math.PI*24;
+    const ringOffset = C*(1 - reviewedCount/7);
+
+    const navBase={ display:"flex", alignItems:"center", gap:"4px", width:"100%", textAlign:"left", background:"transparent", border:"none", color:"#C2D0E4", fontSize:"14.5px", fontWeight:500, padding:"10px 12px", borderRadius:"9px", cursor:"pointer", fontFamily:"'Roboto',sans-serif", transition:"background .12s" };
+    const navActive=Object.assign({},navBase,{ background:"rgba(255,255,255,0.12)", color:"#fff" });
+
+    const navItems=this.content.map(c=>{
+      const active = view==="principle" && pid===c.n;
+      const reviewed=!!d.reviewed[c.n];
+      const started=this.isStarted(c.n);
+      const dotColor = reviewed? "#7FB04A" : (started? "#F0A24E" : "rgba(255,255,255,0.22)");
+      const statusColor = reviewed? "#4A7729" : (started? "#C2741A" : "#B3A88F");
+      const statusLabel = reviewed? "Reviewed" : (started? "In progress" : "Not started");
+      return { n:c.n, short:c.short, q:c.q, go:()=>this.goPrinciple(c.n),
+        navStyle: active? navActive : navBase, numColor: active?"#fff":"#7FA0C8",
+        dotColor, statusColor, statusLabel };
+    });
+
+    const introNavStyle = view==="home"? navActive : navBase;
+    const planNavStyle = view==="plan"? navActive : navBase;
+    const peerNavStyle = view==="peer"? navActive : navBase;
+    const peerSteps = [
+      { n:1, t:"Before the review — the reviewee prepares", d:"You complete the Instructor Input Form to give your reviewer context: your course goals, your students, and what you'd most like feedback on." },
+      { n:2, t:"During the review — the reviewer observes", d:"Your colleague spends time in your live Canvas course and completes the Peer Review Guide, gathering evidence against each of the seven principles." },
+      { n:3, t:"After the review — the reviewer documents", d:"The reviewer writes a summary letter for your dossier — the same procedure used for in-person teaching — and is encouraged to share the completed Guide back with you." }
+    ];
+    const peerDocs = [
+      { tag:"FORM", tagColor:"#4A7729", t:"Instructor Input Form", c:"Completed by the reviewee in advance · Word (.docx), customizable", u:"files/PeerReview_InstructorInputForm.docx" },
+      { tag:"GUIDE", tagColor:"#1E407C", t:"Peer Review Guide for Online Teaching at Penn State", c:"Completed by the reviewer during the review · Word (.docx), customizable", u:"files/PeerReview_Guide.docx" },
+      { tag:"EXAMPLE", tagColor:"#9A8F76", t:"Example of a completed Guide", c:"See what a filled-in review looks like · PDF", u:"files/PeerReview_Example_Completed.pdf" },
+      { tag:"DOSSIER", tagColor:"#C2741A", t:"Dossier summary — example 1", c:"Sample reviewer letter for a P&T dossier · PDF", u:"files/PeerReview_DossierSample1.pdf" },
+      { tag:"DOSSIER", tagColor:"#C2741A", t:"Dossier summary — example 2", c:"Sample reviewer letter for a P&T dossier · PDF", u:"files/PeerReview_DossierSample2.pdf" }
+    ];
+    const plan=this.buildPlan();
+    const planCount = plan.commitments.length + plan.actions.reduce((s,g)=>s+g.items.length,0);
+    const planBadgeStyle={ minWidth:"22px", textAlign:"center", fontSize:"12px", fontWeight:700, padding:"2px 7px", borderRadius:"999px", background: planCount? "#E98300":"rgba(255,255,255,0.14)", color:"#fff" };
+
+    let firstUnreviewed=0;
+    for(let i=1;i<=7;i++){ if(!d.reviewed[i]){ firstUnreviewed=i; break; } }
+    const resumePid = firstUnreviewed||1;
+    const resumeLabel = reviewedCount>0? ("Resume — Principle "+resumePid) : "Start with Principle 1";
+
+    const out = {
+      collegeLabel, showStats, showResearch, reviewedCount,
+      ringCirc:C, ringOffset,
+      isHome:view==="home", isPrinciple:view==="principle", isPlan:view==="plan", isPeer:view==="peer",
+      navItems, introNavStyle, planNavStyle, peerNavStyle, planCount, planBadgeStyle,
+      peerSteps, peerDocs,
+      goHome:()=>this.goHome(), goPlan:()=>this.goPlan(), goPeer:()=>this.goPeer(),
+      resumeGo:()=>this.goPrinciple(resumePid), resumeLabel,
+      mainRef:this.mainRef,
+      p: pid? this.buildPrinciple(pid) : { n:"",short:"",q:"",quote:"",by:"",asking:[],guiding:[],diagnostics:[],research:[],chips:[],practiceShown:[],resources:[],tryThis:"",reflWhat:"",reflSo:"",reflNow:"",onWhat:()=>{},onSo:()=>{},onNow:()=>{},committed:false,toggleCommit:()=>{},commitStyle:{},commitLabel:"",actionGroups:[],reviewed:false,toggleReviewed:()=>{},reviewedStyle:{},reviewedLabel:"",hasPrev:false,hasNext:false,isLast:false,prevGo:null,nextGo:null },
+      planName:d.name||"", onName:e=>this.setName(e.target.value),
+      today:new Date().toLocaleDateString(undefined,{month:"long",day:"numeric",year:"numeric"}),
+      printPlan:()=>window.print(),
+      planEmpty: planCount===0 && plan.reflections.length===0,
+      planHasCommit: plan.commitments.length>0, planCommitments:plan.commitments,
+      planHasActions: plan.actions.length>0, planActions:plan.actions,
+      planHasRefl: plan.reflections.length>0, planReflections:plan.reflections
+    };
+    return out;
+  }
+
+  buildContent(){
+    return [
+      { n:1, short:"Reaching students", q:"Are your students hearing from you?",
+        quote:"Frequent student-faculty contact in and out of classes is the most important factor in student motivation and involvement.", by:"Chickering & Gamson, 1987",
+        asking:[
+          "In a classroom, contact happens without anyone planning it — before class, after class, in the hall, in the lab. Students read your body language; they linger to push on an idea. Those small moments do real work: they signal that you know students are there and care whether they understand.",
+          "Online, none of that happens on its own. If you don't build contact into the course structure, many students will finish your entire course without a single meaningful interaction with you. Instructor presence is not a 'nice to have' — it's a fundamental driver of motivation, persistence, and learning." ],
+        diag:["Three weeks in — could you name five of your students?","Have any of them heard from you in a way that wasn't automated?","If a student were struggling silently, would anything tip you off?"],
+        research:[
+          {t:"Online students consistently name early relationship-building and consistent instructor participation as the most important factors in their sense of belonging and motivation to continue.",c:"McNeill & Bushaala, Frontiers in Education (2023)"},
+          {t:"Even small, consistent actions — a weekly announcement, a brief video, a personalized reply — compound over a semester into a powerful sense of connection.",c:"University of Iowa (2024)"},
+          {t:"Students value substantive presence (real engagement with content and their ideas) far more than stylistic polish. They can tell the difference.",c:"Watson, Sullivan & Watson (2023)"} ],
+        practice:[
+          {d:"Astronomy",t:"Records a short video at the start of each module connecting the week's content to a current space mission or NASA dataset."},
+          {d:"Biology",t:"Records a 3-minute 'Week in Review' video each Sunday, naming students who contributed something worth noticing the prior week."},
+          {d:"Biochemistry",t:"Runs a 'Molecule of the Week' forum where students post a short explanation of a biomolecule and respond to two peers."},
+          {d:"Chemistry",t:"Posts a 'Common Misconceptions' announcement after each exam, addressing the few concepts that tripped up most students — no names."},
+          {d:"Mathematics",t:"Holds weekly Zoom office hours plus an asynchronous 'Ask the Professor' forum with a 24-hour response promise."},
+          {d:"Physics",t:"Uses Course Insights to spot students inactive for five or more days, then sends a personal check-in."},
+          {d:"Statistics",t:"Opens each module with a short video tying the content to a recent study, news story, or dataset from their own research."} ],
+        reflWhat:["When a student has a question, do they know exactly how to reach you and when to expect a reply?","How often do you initiate contact proactively?","Do your students know who you are as a scientist?"],
+        so:"Students who don't feel connected disengage — and online, disengagement often becomes withdrawal. The cost of invisible instructor presence is real and measurable.",
+        tryThis:"Record a welcome video. Two to five minutes, shot on your phone if that's easiest. Tell students who you are as a scientist, what you find genuinely interesting about this course, and how to reach you. Students respond to authenticity far more than production value.",
+        actions:[
+          {g:"Establish your presence from Day One", items:["Record a 2–5 minute welcome video introducing you as a person and scientist","Build a 'liquid syllabus' — a warm, mobile-friendly course intro","Create a 'Start Here' module that orients and genuinely welcomes students"]},
+          {g:"Communicate consistently and proactively", items:["Post weekly announcements that do more than list deadlines","State a response-time policy (e.g. 24 hours on weekdays) and honor it","Use Course Insights to spot dropping engagement early","Use Canvas Inbox for personalized outreach to students falling behind"]},
+          {g:"Make office hours accessible", items:["Offer Zoom office hours at multiple times across time zones","Offer asynchronous office hours for students who can't attend live","Explicitly invite students — many first-gen students don't feel entitled to your time"]},
+          {g:"Be present in discussions", items:["Ask probing follow-up questions instead of 'Great point!'","Respond to some posts personally, using the student's name"]} ],
+        res:[
+          {t:"Five Steps for Enhancing Instructor Presence in Online Courses",c:"University of Iowa (2024)",u:"https://teachonline.uiowa.edu/news/2024/10/five-steps-enhancing-instructor-presence-online-courses"},
+          {t:"Meaningful Connection in Virtual Classrooms",c:"McNeill & Bushaala, Frontiers in Education (2023)",u:"https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2023.1271245/full"},
+          {t:"Liquid Syllabus",c:"Michelle Pacansky-Brock",u:"https://ccconlineed.instructure.com/courses/6771"},
+          {t:"How do I use the Inbox?",c:"Canvas Instructor Guide",u:"https://community.canvaslms.com/en/kb/articles/662865-how-do-i-use-the-inbox"} ] },
+
+      { n:2, short:"Learning together", q:"Are your students learning from each other?",
+        quote:"Learning is enhanced when it is more like a team effort than a solo race. Good learning, like good work, is collaborative and social, not competitive and isolated.", by:"Chickering & Gamson, 1987",
+        asking:[
+          "Science doesn't happen in isolation. Research is conducted in teams, data is peer-reviewed, discoveries build on the work of others. Yet the default structure of many online science courses looks nothing like this — students reading alone, solving problem sets alone, submitting alone, never once encountering another scientist's thinking.",
+          "If you want students to learn from each other, you have to design for it. It won't happen on its own." ],
+        diag:["Do your students know each other's names?","Is your group work structured so no single student carries the group?","Is your peer feedback purposeful — or informal and optional?"],
+        research:[
+          {t:"Science students prefer collaborative learning for complex material — but free-riding, personality clashes, and no structure kill online group work. Success requires explicit roles, clear accountability, and instructor facilitation.",c:"Chim et al., Education and Information Technologies (2024)"},
+          {t:"Counterintuitively, giving feedback benefits students more than receiving it — and anonymous peer review produces significantly more honest, constructive feedback.",c:"Ortega-Ruiperez & Correa-Gorospe, Frontiers in Education (2024)"},
+          {t:"Mandatory, structured peer interaction is not optional enrichment — it's a critical intervention against the disengagement online environments naturally produce.",c:"Akpen et al., Discover Education (2024)"} ],
+        practice:[
+          {d:"Astronomy",t:"Runs a 'Sky Watch' forum where students post observations from current missions and respond substantively to two peers."},
+          {d:"Biology",t:"Uses a 'Science in the News' forum — students post a current research article and respond to two peers."},
+          {d:"Biochemistry",t:"Assigns permanent lab groups of four with a weekly collaborative data-interpretation exercise and rotating roles."},
+          {d:"Chemistry",t:"Runs a 'Peer Lab Review' where pairs exchange pre-lab write-ups, giving feedback against a journal-style rubric."},
+          {d:"Mathematics",t:"Assigns collaborative problem-solving where each student explains one step of a multi-step proof to the group."},
+          {d:"Physics",t:"Assigns peer-teaching presentations: small groups make a short concept video and field questions in a forum."},
+          {d:"Statistics",t:"Uses Canvas peer review so students critique each other's data-analysis projects before final submission."} ],
+        reflWhat:["Do your students actually know one another?","How do you keep one student from carrying the group?","Is your peer feedback structured, or left to chance?"],
+        so:"Students who lack structured peer interaction report higher isolation, lower engagement, and worse outcomes. The absence of peer learning isn't neutral — it actively costs you.",
+        tryThis:"Add one anonymous peer review to a major assignment using Canvas's built-in tool. Give a rubric focused on reasoning and methodology — then debrief: what did students learn from reviewing a peer's work, not just from feedback on their own?",
+        actions:[
+          {g:"Design structured, purposeful collaboration", items:["Assign persistent small groups of 3–4 for the semester","Give explicit, rotating roles — facilitator, recorder, analyst, devil's advocate","Build individual accountability alongside group products"]},
+          {g:"Use peer review strategically", items:["Use Canvas's peer review tool for major assignments","Provide a rubric focused on methodology, reasoning, and interpretation","Consider anonymous review to improve feedback quality","Debrief: what did students learn from reviewing a peer's work?"]},
+          {g:"Create community from the start", items:["Run a first-week icebreaker tied to your discipline","Create a 'Coffee Shop' forum for non-course conversation"]} ],
+        res:[
+          {t:"Peer Assessment to Promote Self-Regulated Learning",c:"Ortega-Ruiperez & Correa-Gorospe (2024)",u:"https://doi.org/10.3389/feduc.2024.1376505"},
+          {t:"Experiences of Face-to-Face and Online Collaborative Learning",c:"Chim et al. (2024)",u:"https://doi.org/10.1007/s10639-024-12533-1"},
+          {t:"How do I use peer review assignments?",c:"Canvas Instructor Guide",u:"https://community.canvaslms.com/t5/Instructor-Guide/How-do-I-use-peer-review-assignments-in-a-course/ta-p/697"} ] },
+
+      { n:3, short:"Active learning", q:"Are students doing science, or just watching it?",
+        quote:"Learning is not a spectator sport. Students do not learn much just by sitting in classes listening to teachers, memorizing pre-packaged assignments, and spitting out answers.", by:"Chickering & Gamson, 1987",
+        asking:[
+          "Ask of every part of your course: what are students doing with this material? Not receiving it. Not storing it. Doing something with it. The default — watch lecture, read chapter, take quiz — has its place, but on its own it positions students as passive consumers.",
+          "Active learning means asking students to analyze, apply, create, evaluate, experiment, and reflect. In science this isn't optional: science is a process of inquiry, and the content is inseparable from the practice." ],
+        diag:["Beyond reading and watching, are students analyzing and deciding?","Do students get to make choices, take risks, and learn from mistakes?","Are your virtual labs woven into the course — or bolted on?"],
+        research:[
+          {t:"Collaborative learning, hands-on discovery, and inquiry-based learning are the most effective instructional approaches in online STEM — far outperforming passive content delivery.",c:"Meng et al., Frontiers in Education (2024)"},
+          {t:"Virtual labs as isolated activities produce minimal gains. Embedded in a rich ecosystem — pre-lab prep, collaborative analysis, reflective debrief — they produce outcomes comparable to physical labs.",c:"May, Jahnke & Moore, Journal of Computing in Higher Education (2023)"} ],
+        practice:[
+          {d:"Astronomy",t:"Has students run their own observational analyses on NASA datasets, form hypotheses, and present findings."},
+          {d:"Biology",t:"Assigns case studies from real published research — evaluate methodology, interpret data, propose follow-up experiments."},
+          {d:"Biochemistry",t:"Uses Labster simulations for pre-lab prep before a synchronous session to discuss observations and hypotheses."},
+          {d:"Chemistry",t:"Uses ChemCollective labs so students design their own experiments before analyzing results."},
+          {d:"Mathematics",t:"Uses Desmos for interactive graphing — students explore relationships visually before formal proofs."},
+          {d:"Physics",t:"Uses PhET simulations to explore phenomena before engaging the mathematical formalism."},
+          {d:"Statistics",t:"Uses real datasets from ICPSR or Kaggle — students formulate their own questions and defend their analytical choices in writing."} ],
+        reflWhat:["Where are students analyzing, applying, or deciding — beyond reading and watching?","Where can students make choices and learn from mistakes?","How are your simulations connected to the rest of the course?"],
+        so:"Passive design doesn't just produce less learning — it teaches students that science is a body of facts to recall, not a process of inquiry.",
+        tryThis:"Replace one reading-then-quiz sequence with a guided inquiry activity: have students explore a phenomenon, form a hypothesis, and interpret data before reading the textbook explanation. Even a short PhET simulation plus two interpretive questions changes the cognitive work.",
+        actions:[
+          {g:"Embed inquiry and discovery", items:["Swap some readings for guided inquiry — explore and hypothesize before reading","Use case studies from real research to evaluate evidence and draw conclusions","Assign projects that engage primary literature, not just textbooks"]},
+          {g:"Leverage virtual and interactive tools", items:["Labster — virtual labs for Biology, Chemistry, Biochemistry","PhET — virtual experimentation for Physics and Chemistry","ChemCollective — open-ended chemistry simulations","Desmos / GeoGebra — interactive mathematical exploration","ICPSR / Kaggle — real-world datasets for Statistics"]},
+          {g:"Build reflection into learning", items:["Add brief reflective prompts at the end of assignments and modules","Use exit tickets to consolidate learning and surface gaps"]} ],
+        res:[
+          {t:"A Systematic Review of the Effectiveness of Online Learning",c:"Meng et al., Frontiers in Education (2024)",u:"https://doi.org/10.3389/feduc.2023.1334153"},
+          {t:"Online Laboratories and Virtual Experimentation",c:"May, Jahnke & Moore (2023)",u:"https://doi.org/10.1007/s12528-023-09380-3"},
+          {t:"Labster",c:"Virtual labs — Biology, Chemistry, Biochemistry",u:"https://www.labster.com/"},
+          {t:"PhET Interactive Simulations",c:"Physics & Chemistry",u:"https://phet.colorado.edu/"},
+          {t:"ChemCollective",c:"Open-ended chemistry virtual labs",u:"https://chemcollective.org/vlabs"},
+          {t:"Desmos",c:"Interactive math exploration",u:"https://www.desmos.com/"},
+          {t:"GeoGebra",c:"Interactive math exploration",u:"https://www.geogebra.org/"},
+          {t:"ICPSR Data Repository",c:"Real-world datasets",u:"https://www.icpsr.umich.edu/"},
+          {t:"Kaggle Datasets",c:"Real-world datasets",u:"https://www.kaggle.com/datasets"} ] },
+
+      { n:4, short:"Feedback that teaches", q:"Does your feedback do anything?",
+        quote:"Knowing what you know and don't know focuses learning. Students need appropriate feedback on performance to benefit from courses.", by:"Chickering & Gamson, 1987",
+        asking:[
+          "Before: a student submits a lab report. Three weeks later, a number appears in Canvas. Two words in the comments: 'Needs improvement.' After: the same student gets a 90-second audio note walking through exactly where her reasoning broke down, why it matters, and what to do differently. She submits her next report with more confidence.",
+          "The difference is the difference between feedback that teaches and feedback that scores. In a physical classroom, feedback is continuous and informal. Online, every bit of it has to be deliberately designed and consistently delivered." ],
+        diag:["Do students know when to expect feedback — and do you hit that timeframe?","Could a student read your feedback and know exactly what to do next?","Do students get to test their understanding before high-stakes work?"],
+        research:[
+          {t:"Feedback that works is timely, specific, positive (naming strengths as well as gaps), and actionable — telling students concretely what to do next, not just what they got wrong.",c:"Kerman et al., Education and Information Technologies (2024)"},
+          {t:"Technology-mediated feedback — audio, video, annotated documents — is perceived as more personal and useful than text-only comments, especially for lab reports and data analysis.",c:"Kerman et al. (2024)"},
+          {t:"Frequent, low-stakes self-assessment — practice quizzes, concept checks, worked examples — improves high-stakes performance and reduces test anxiety.",c:"Formative assessment research"} ],
+        practice:[
+          {d:"Astronomy",t:"Records a brief video after major assignments walking through common errors across the class — no names — tied to the underlying concepts."},
+          {d:"Biology",t:"Uses Canvas rubrics for all major assignments so expectations are clear before students submit."},
+          {d:"Biochemistry",t:"Provides audio feedback on lab reports via Canvas's media recording — conversational in a way text can't replicate."},
+          {d:"Chemistry",t:"Uses Gradescope for handwritten problem sets and lab reports, with AI-assisted grouping for consistent feedback at scale."},
+          {d:"Mathematics",t:"Posts annotated worked solutions within 48 hours, explaining the reasoning at each step."},
+          {d:"Physics",t:"Uses Gradescope's rubric-based grading for consistent feedback on approach, execution, and conceptual understanding."},
+          {d:"Statistics",t:"Builds practice quizzes with detailed answer explanations into each module."} ],
+        reflWhat:["How quickly did students get feedback — and was that timeframe communicated?","Was it specific enough to act on?","Do students have low-stakes chances to test understanding first?"],
+        so:"Feedback that arrives too late, says too little, or gives no direction doesn't improve learning. It just documents outcomes.",
+        tryThis:"Try one audio feedback comment on a major assignment using Canvas's media recording in SpeedGrader. No script — just talk through what the student did, where the reasoning broke down, and what you'd want next time. Two to three minutes. Students consistently report it as more useful and more human than text.",
+        actions:[
+          {g:"Establish and honor clear feedback policies", items:["State your feedback turnaround time in the syllabus — and honor it","Use Canvas rubrics so criteria are transparent before submission"]},
+          {g:"Make feedback specific and actionable", items:["For each assignment: what was strong, what needs work, and exactly how to improve","Try 2–3 minute audio or video feedback for complex assignments","Use SpeedGrader's comment library to scale detailed feedback","Gradescope is licensed for Eberly faculty — contact Melissa Hicks to start"]},
+          {g:"Build in formative assessment", items:["Create practice quizzes with detailed answer explanations","Use quiz analytics to spot widely-missed concepts","Consider draft submissions before grading"]} ],
+        res:[
+          {t:"Online Peer Feedback in Higher Education",c:"Kerman et al. (2024)",u:"https://doi.org/10.1007/s10639-023-12273-8"},
+          {t:"Seven Keys to Effective Feedback",c:"Grant Wiggins, ASCD",u:"https://www.ascd.org/el/articles/seven-keys-to-effective-feedback"},
+          {t:"How do I use SpeedGrader?",c:"Canvas Instructor Guide",u:"https://community.canvaslms.com/t5/Instructor-Guide/How-do-I-use-SpeedGrader/ta-p/757"},
+          {t:"Gradescope",c:"Licensed for Eberly faculty",u:"https://www.gradescope.com/"} ] },
+
+      { n:5, short:"Time & pacing", q:"Do students know how long this will take?",
+        quote:"Time plus energy equals learning. There is no substitute for time on task.", by:"Chickering & Gamson, 1987",
+        asking:[
+          "Picture your course from the outside. A student opens the syllabus on day one. Does she know how many hours a week this requires? Which weeks are heavier? Does she have enough information to decide, honestly, whether she can manage this alongside her job and her kids?",
+          "In a residential course, the calendar provides an external scaffold for managing time. Online, that scaffold is mostly absent — students have to build it themselves, often in a very constrained space. This principle is also about equity: designing with time on task in mind is a form of respect for the lives your students actually live." ],
+        diag:["Do students know how many hours a week your course takes?","Are there crunch weeks where major assignments pile up?","Do your deadlines fit when working students are actually free?"],
+        research:[
+          {t:"45% of students report increased workload and stress as a direct result of digital learning environments — overwhelmed by the volume of content and unsure how to prioritize.",c:"Time for Class 2024, Bharadwaj et al."},
+          {t:"Students given explicit time-management guidance — time-to-completion estimates, clearly paced deadlines, course-specific tips — reported significantly lower stress and higher engagement.",c:"Time for Class 2024"},
+          {t:"Poorly paced courses produce significantly worse outcomes than well-paced ones, independent of content quality. When students are overwhelmed, they don't learn — they survive.",c:"Chen, Paas & Sweller (2023)"} ],
+        practice:[
+          {d:"Astronomy",t:"Builds a 'How to Succeed in This Course' page with a realistic week-by-week time-commitment guide."},
+          {d:"Biology",t:"Includes an 'About This Module' page with objectives and an estimated time-to-completion."},
+          {d:"Biochemistry",t:"Runs a Week-3 'workload check' survey, adjusts time estimates, and tells students why she's changing them."},
+          {d:"Chemistry",t:"Publishes a course calendar mapping all deadlines, flagging heavy weeks, and suggesting a weekly schedule."},
+          {d:"Mathematics",t:"Adds time estimates to problem sets: 'Most finish in 2–3 hours. If much longer, please reach out.'"},
+          {d:"Physics",t:"Uses Canvas module-release settings to pace the course weekly and prevent racing ahead, then falling behind."},
+          {d:"Statistics",t:"Sets Sunday-evening deadlines, based on when online students are actually most active."} ],
+        reflWhat:["Do students know the weekly hours this course requires?","Are there crunch weeks where assignments land together?","Were deadlines set around when students can actually work?"],
+        so:"Students who can't predict and manage their workload don't just fall behind — they disengage entirely. Workload transparency isn't a concession; it's a condition for learning.",
+        tryThis:"Run a workload-check survey at the end of Week 3. One question: 'How many hours did you spend on this course last week?' Use it to calibrate your estimates, then tell students what you found and what you're adjusting. Twenty minutes to set up; an enormous amount of trust.",
+        actions:[
+          {g:"Make time visible", items:["Include a weekly time-commitment estimate in your syllabus","Add time-to-completion estimates to each module and major assignment","Identify and flag 'heavy weeks' in advance"]},
+          {g:"Pace with intention", items:["Distribute deadlines evenly across the semester","Set deadlines for when working adults are free (Sunday evenings, not Wednesday mornings)","Use Canvas module-release settings to pace the course"]},
+          {g:"Support student planning", items:["Add a 'How to Succeed in This Course' page with practical time advice"]} ],
+        res:[
+          {t:"Time for Class 2024",c:"Bharadwaj et al., Tyton Partners",u:"https://tytonpartners.com/time-for-class-2024/"},
+          {t:"A Cognitive Load Theory Approach to Task Complexity",c:"Chen, Paas & Sweller (2023)",u:"https://doi.org/10.1007/s10648-023-09782-w"},
+          {t:"Time Management for Online Learners",c:"Penn State World Campus",u:"https://www.worldcampus.psu.edu/about-us/news-and-features/time-management-five-essentials-for-online-learners"} ] },
+
+      { n:6, short:"High expectations", q:"Do your students know what excellent looks like?",
+        quote:"Expect more and you will get more. High expectations are important for everyone — for the poorly prepared, for those unwilling to exert themselves, and for the bright and well-motivated.", by:"Chickering & Gamson, 1987",
+        asking:[
+          "You know what excellent scientific work looks like. Your students, especially early on, often don't. They're not being lazy when they aim too low — they're guessing. High expectations don't mean making things harder; they mean making the target explicit.",
+          "When students can see what excellent work looks like — a concrete example with commentary on why it's strong — they perform better. This principle is also about belief: students perform better when they sense you genuinely believe in their capacity to succeed." ],
+        diag:["Have you shown students what excellent work looks like — not just described it?","Are your objectives written as what students can DO?","Does your feedback communicate belief in their ability to go further?"],
+        research:[
+          {t:"Worked examples and model answers of high-quality work significantly improve performance on later assignments. When students can see what they're aiming for, they calibrate more accurately.",c:"Kerman et al. (2024)"},
+          {t:"Writing learning objectives in terms of what students will be able to DO — not what content is covered — is one of the strongest predictors of achievement in online courses.",c:"Kerman et al. (2024)"},
+          {t:"Detailed rubrics provided before submission improve both the quality of student work and the efficiency of instructor grading.",c:"Rubric-based assessment research"} ],
+        practice:[
+          {d:"Astronomy",t:"Assigns a semester-long 'Scientist's Notebook' where students document their thinking, questions, and evolving understanding."},
+          {d:"Biology",t:"Writes module objectives in Bloom's action verbs: 'you will be able to analyze the relationship between genotype and phenotype...'"},
+          {d:"Biochemistry",t:"Shares a 'Standards of Scientific Argument' document defining strong evidence, sound reasoning, and appropriate use of primary literature."},
+          {d:"Chemistry",t:"Shares annotated examples of excellent lab reports from past semesters, with commentary on what makes each element strong."},
+          {d:"Mathematics",t:"Posts 'What I'm Looking For' notes with each major assignment, naming the reasoning and communication standards."},
+          {d:"Statistics",t:"Uses a detailed analytic rubric that specifies what distinguishes an excellent analysis from a merely good one."} ],
+        reflWhat:["Have you shown — not just described — excellent work?","Are objectives written as what students can do?","Does your pushback communicate confidence in their ability?"],
+        so:"Unstated expectations aren't high standards. They're a guessing game.",
+        tryThis:"Share one annotated example of excellent student work (identifying information removed) for a major assignment — with two or three sentences on what makes each key element strong. Post it before students begin the assignment, not after.",
+        actions:[
+          {g:"Make the target explicit", items:["Write module objectives using Bloom's action verbs","Provide detailed rubrics before students begin working","Share annotated examples of excellent work with commentary","Add a 'What I'm Looking For' note to each major assignment"]},
+          {g:"Communicate belief", items:["Use probing questions that push students toward deeper thinking","Acknowledge intellectual risk-taking, even when attempts are imperfect","Offer draft submissions with feedback before the final"]} ],
+        res:[
+          {t:"Using Bloom's Taxonomy",c:"University of Arkansas TIPS",u:"https://tips.uark.edu/using-blooms-taxonomy/"},
+          {t:"Online Peer Feedback in Higher Education",c:"Kerman et al. (2024)",u:"https://doi.org/10.1007/s10639-023-12273-8"},
+          {t:"Schreyer Institute for Teaching Excellence",c:"Penn State",u:"https://www.schreyerinstitute.psu.edu/"},
+          {t:"Gradescope",c:"Licensed for Eberly faculty",u:"https://www.gradescope.com/"} ] },
+
+      { n:7, short:"Reaching everyone", q:"Who might your course be leaving out?",
+        quote:"There are many roads to learning. People bring different talents and styles of learning to college.", by:"Chickering & Gamson, 1987",
+        asking:[
+          "Your online courses serve a genuinely diverse population: recent graduates and mid-career professionals, multilingual learners and native speakers, students with disabilities, students with strong math backgrounds and students still building them. Respecting diverse talents means designing so all students have a real opportunity to succeed — not by lowering standards, but by providing multiple pathways to meet them.",
+          "And the harder point: if your course design systematically disadvantages some students, then your grades are measuring design barriers as much as student learning. That's worth examining honestly." ],
+        diag:["Could your course design be disadvantaging some students?","Have you audited your materials for accessibility (e.g. with Ally)?","Does your content reflect the diversity of scientists in your field?"],
+        research:[
+          {t:"Across 11,868 students, achievement gaps for underrepresented-minority and first-generation students were reduced by up to 56% in diverse, inclusive learning environments compared to homogeneous ones.",c:"Bowman et al., AERA Open (2023)"},
+          {t:"Courses designed with Universal Design for Learning benefit all students, not just those with identified disabilities. CAST released UDL Guidelines 3.0 in July 2024, with a stronger emphasis on systemic barriers and learner identity.",c:"CAST (2024)"},
+          {t:"Proactive accommodation — designing courses to be accessible from the start, rather than retrofitting after a request — is both more effective and more equitable.",c:"Penn State Student Disability Resources"} ],
+        practice:[
+          {d:"Astronomy",t:"Lets students complete observational work using either NASA archive data or their own smartphone-documented backyard observations."},
+          {d:"Biology",t:"Offers a choice of formats for one major project: written lab report, narrated video, or annotated data visualization."},
+          {d:"Biochemistry",t:"Provides optional supplementary materials to review foundational chemistry — without making them mandatory for everyone."},
+          {d:"Chemistry",t:"Uses Penn State's Anthology Ally to ensure all course materials meet accessibility standards before the course begins."},
+          {d:"Mathematics",t:"Includes closed captions on all recorded lectures and transcripts for audio content."},
+          {d:"Physics",t:"Includes a proactive accommodations statement inviting students to discuss their needs at the start of the semester."},
+          {d:"Statistics",t:"Designs assessments using datasets from a variety of cultural and geographic contexts."} ],
+        reflWhat:["Who might be disadvantaged by your current structure or deadlines?","Are all materials accessible — have you run Anthology Ally?","Does your content reflect the diversity of scientists in your field?"],
+        so:"Course design is never neutral. Every structural choice either opens or closes a door for someone.",
+        tryThis:"Open Anthology Ally in your Canvas course, find your three lowest-scoring files, and follow Ally's step-by-step remediation guidance. About 30 minutes — one of the highest-return investments you can make in your course.",
+        actions:[
+          {g:"Design for accessibility from the start", items:["Audit all materials with Anthology Ally before the course begins","Caption all videos and provide transcripts (Kaltura auto-captions)","Tag PDFs for screen readers — Ally walks you through the fix"]},
+          {g:"Provide multiple pathways", items:["Offer alternative formats for some major assignments","Use a variety of assessment types, not just exams and reports","Consider flexible deadline policies that keep standards intact"]},
+          {g:"Be proactive about accommodations", items:["Include a proactive accommodations statement in your syllabus","Familiarize yourself with Penn State Student Disability Resources","Reach out to the Grove Center for help with accessible materials"]} ],
+        res:[
+          {t:"UDL Guidelines 3.0",c:"CAST (2024)",u:"https://udlguidelines.cast.org/more/about-guidelines-3-0/"},
+          {t:"Minoritized Student Representation in STEM Courses",c:"Bowman et al., AERA Open (2023)",u:"https://doi.org/10.1177/23328584231209957"},
+          {t:"Anthology Ally at Penn State",c:"Accessibility tooling",u:"https://accessibility.psu.edu/software/canvas/anthologyally/"},
+          {t:"Student Disability Resources",c:"Penn State",u:"https://equity.psu.edu/offices/student-disability-resources"},
+          {t:"Kaltura at Penn State",c:"Video hosting & captioning",u:"https://kaltura.psu.edu/"},
+          {t:"Universal Design for Learning Endorsement",c:"World Campus Faculty Development",u:"https://psu.catalog.instructure.com/browse/wcfd/courses/ol-360001-universal-design-for-learning-2026"} ] }
+    ];
+  }
+}
+</script>
+</body>
+</html>

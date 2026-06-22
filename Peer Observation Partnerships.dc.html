@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;}
+    html,body{margin:0;padding:0;scroll-behavior:smooth;}
+    body{background:#F5F2EB;-webkit-font-smoothing:antialiased;}
+    a{color:inherit;}
+    ::selection{background:#E98300;color:#fff;}
+  </style>
+</helmet>
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" rx="20" fill="#001E44"></rect>
+    <circle cx="40" cy="50" r="13" fill="none" stroke="#E98300" stroke-width="5"></circle>
+    <circle cx="62" cy="50" r="13" fill="none" stroke="#7FB04A" stroke-width="5"></circle>
+  </svg>
+</template>
+
+<div style="font-family:'Roboto',sans-serif; color:#2B3645; background:#F5F2EB; min-height:100vh;">
+
+  <nav style="max-width:980px; margin:0 auto; padding:18px 40px; display:flex; align-items:center; gap:12px 30px; flex-wrap:wrap;">
+    <div style="font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:#9A8F76; font-weight:700; margin-right:auto;">{{ collegeLabel }} · The Grove Center</div>
+    <a href="Online Teaching Companion.dc.html" style="font-size:14px; color:#5A6473; text-decoration:none; font-weight:600; padding-bottom:3px; border-bottom:2px solid transparent;" style-hover="color:#1E407C;">A Guide to Effective Online Teaching</a>
+    <span style="font-size:14px; color:#001E44; font-weight:700; padding-bottom:3px; border-bottom:2px solid #E98300;">Peer Observation Partnerships</span>
+  </nav>
+
+  <header style="background:#001E44; color:#E7ECF3;">
+    <div style="max-width:980px; margin:0 auto; padding:74px 40px 78px;">
+      <div style="font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:#8FA6C4; font-weight:700;">Peer Observation Partnerships</div>
+      <h1 style="font-family:'Roboto Slab',serif; font-weight:500; font-size:54px; line-height:1.05; letter-spacing:-0.015em; color:#fff; margin:18px 0 0; max-width:760px;">Teaching happens behind a closed door.</h1>
+      <p style="font-size:20px; line-height:1.6; color:#C2D0E4; margin:24px 0 0; max-width:660px;">Whether you teach in a lecture hall or entirely in Canvas, almost no colleague ever sees you do it. A peer observation partnership opens that door on purpose — volunteer to pair with another instructor, watch how each other teaches, and gather honest data to reflect on and improve, entirely on your own terms.</p>
+
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin:34px 0 0;">
+        <a href="mailto:{{ contactEmail }}?subject=Peer%20observation%20partnership" style="background:#E98300; color:#fff; text-decoration:none; border-radius:9px; padding:15px 26px; font-size:16px; font-weight:600; box-shadow:0 2px 10px rgba(233,131,0,0.28);">Volunteer to be paired →</a>
+        <a href="#how" style="color:#C2D0E4; text-decoration:none; font-size:15.5px; font-weight:600; border-bottom:1px solid rgba(194,208,228,0.35); padding-bottom:2px;">See how a partnership works</a>
+      </div>
+
+      <div style="display:flex; flex-wrap:wrap; gap:10px; margin:36px 0 0;">
+        <sc-for list="{{ promises }}" as="pr" hint-placeholder-count="3">
+          <span style="display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:600; color:#9DB1CC; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:999px; padding:8px 15px;"><span style="width:7px;height:7px;border-radius:50%;background:#7FB04A;flex:none;"></span>{{ pr }}</span>
+        </sc-for>
+      </div>
+    </div>
+  </header>
+
+  <main style="max-width:860px; margin:0 auto; padding:0 40px;">
+
+    <section style="padding:76px 0 0;">
+      <div style="font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:#9A8F76; font-weight:700;">Why partner at all?</div>
+      <h2 style="font-family:'Roboto Slab',serif; font-weight:500; font-size:36px; line-height:1.15; color:#001E44; margin:14px 0 0; max-width:680px;">Teaching is the one thing we do entirely alone, in a room no colleague ever sees.</h2>
+      <p style="font-size:18px; line-height:1.7; color:#4A5564; margin:18px 0 0; max-width:680px;">Even in a building, a colleague rarely sees more than a glimpse through an open door — and online it never happens at all. Most of us teach on the evidence of a grade distribution and an end-of-term survey. A partner changes that, in person or online — and the research on why is surprisingly strong.</p>
+
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:34px 0 0;">
+        <sc-for list="{{ reasons }}" as="r" hint-placeholder-count="3">
+          <div style="background:#fff; border:1px solid #EAE4D8; border-top:3px solid #4A7729; border-radius:12px; padding:24px 24px 22px; box-shadow:0 1px 3px rgba(40,30,10,0.04);">
+            <div style="font-family:'Roboto Slab',serif; font-size:19px; line-height:1.25; color:#001E44;">{{ r.h }}</div>
+            <p style="font-size:14.5px; line-height:1.6; color:#566273; margin:11px 0 0;">{{ r.t }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section style="padding:72px 0 0;">
+      <div style="font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:#9A8F76; font-weight:700;">Before anything else</div>
+      <h2 style="font-family:'Roboto Slab',serif; font-weight:500; font-size:36px; line-height:1.15; color:#001E44; margin:14px 0 0; max-width:680px;">What this is — and what it isn't.</h2>
+      <p style="font-size:18px; line-height:1.7; color:#4A5564; margin:18px 0 24px; max-width:680px;">This is not the formal peer review that goes in your dossier. It's a separate, voluntary, developmental partnership. The distinction matters, so here it is plainly.</p>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
+        <div style="background:#fff; border:1px solid #D6E1F0; border-top:3px solid #4A7729; border-radius:14px; padding:26px 28px;">
+          <div style="font-family:'Roboto Slab',serif; font-size:21px; color:#001E44;">What it is</div>
+          <div style="margin:16px 0 0;">
+            <sc-for list="{{ isList }}" as="i" hint-placeholder-count="5">
+              <div style="display:flex; gap:11px; align-items:flex-start; padding:8px 0;">
+                <span style="flex:none; width:20px; height:20px; border-radius:5px; background:#4A7729; display:flex; align-items:center; justify-content:center; margin-top:1px;"><span style="color:#fff; font-size:12px; font-weight:700; line-height:1;">✓</span></span>
+                <span style="flex:1; font-size:15.5px; line-height:1.5; color:#3A4654;">{{ i }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <div style="background:#FAF7F0; border:1px solid #E4DECF; border-top:3px solid #B9AE96; border-radius:14px; padding:26px 28px;">
+          <div style="font-family:'Roboto Slab',serif; font-size:21px; color:#5A5340;">What it isn't</div>
+          <div style="margin:16px 0 0;">
+            <sc-for list="{{ isntList }}" as="i" hint-placeholder-count="5">
+              <div style="display:flex; gap:11px; align-items:flex-start; padding:8px 0;">
+                <span style="flex:none; width:20px; height:20px; border-radius:5px; background:#fff; border:1.5px solid #CFC6B2; display:flex; align-items:center; justify-content:center; margin-top:1px;"><span style="color:#A99E85; font-size:11px; font-weight:700; line-height:1;">✕</span></span>
+                <span style="flex:1; font-size:15.5px; line-height:1.5; color:#6B6450;">{{ i }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin:20px 0 0; background:#FCF1E2; border:1px solid #F3D9B6; border-radius:14px; padding:26px 30px;">
+        <p style="font-family:'Roboto Slab',serif; font-size:22px; line-height:1.45; color:#5A3D17; margin:0;">Nothing from this partnership goes to your chair or the dean. The notes, the data, the conversation — they are yours to keep, share, or set aside, and no one else's to see.</p>
+      </div>
+      <p style="font-size:15.5px; line-height:1.62; color:#6B7585; margin:18px 0 0; max-width:680px;">Need the <strong style="color:#4A5564;">formal, summative</strong> review for your annual report or P&amp;T dossier instead? That's a separate process with its own instruments — find it in the <a href="Online Teaching Companion.dc.html" style="color:#1E407C; font-weight:600; text-decoration:none; border-bottom:1px solid rgba(30,64,124,0.3);">online teaching companion</a>.</p>
+    </section>
+
+    <section id="how" style="padding:72px 0 0;">
+      <div style="font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:#9A8F76; font-weight:700;">How it works</div>
+      <h2 style="font-family:'Roboto Slab',serif; font-weight:500; font-size:36px; line-height:1.15; color:#001E44; margin:14px 0 4px; max-width:680px;">A reciprocal cycle, paced to your semester.</h2>
+      <p style="font-size:18px; line-height:1.7; color:#4A5564; margin:14px 0 30px; max-width:680px;">You set the focus. Your partner gathers data against it. You make sense of it together — then you switch seats and do the same for them.</p>
+
+      <sc-for list="{{ steps }}" as="st" hint-placeholder-count="5">
+        <div style="display:flex; gap:22px; align-items:flex-start; padding:0 0 26px;">
+          <div style="flex:none; width:40px; height:40px; border-radius:50%; background:#001E44; color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Roboto Slab',serif; font-size:18px;">{{ st.n }}</div>
+          <div style="flex:1; padding-top:4px; border-bottom:1px solid #ECE7DB; padding-bottom:24px;">
+            <div style="font-size:19px; font-weight:600; color:#1E407C;">{{ st.t }}</div>
+            <p style="font-size:16.5px; line-height:1.65; color:#3A4654; margin:7px 0 0; max-width:640px;">{{ st.d }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </section>
+
+    <section style="padding:72px 0 0;">
+      <div style="font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:#9A8F76; font-weight:700;">Two ways to observe</div>
+      <h2 style="font-family:'Roboto Slab',serif; font-weight:500; font-size:36px; line-height:1.15; color:#001E44; margin:14px 0 0; max-width:680px;">However you teach, there's a way to be seen.</h2>
+      <p style="font-size:18px; line-height:1.7; color:#4A5564; margin:18px 0 28px; max-width:680px;">Observation isn't one-size-fits-all. Pick the mode that matches how this course actually meets — a live classroom or an online course in Canvas. The partnership cycle is identical; only the way your partner gathers data changes.</p>
+
+      <div style="background:#EEF3FA; border:1px solid #D6E1F0; border-radius:16px; padding:36px 40px;">
+        <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+          <span style="font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#fff; background:#1E407C; padding:5px 11px; border-radius:999px;">Face-to-face</span>
+          <span style="font-size:13px; font-weight:600; color:#1E407C;">In the room · powered by CCEDIR</span>
+        </div>
+        <h3 style="font-family:'Roboto Slab',serif; font-weight:500; font-size:27px; line-height:1.2; color:#001E44; margin:16px 0 0;">Live classroom observation</h3>
+        <p style="font-size:17px; line-height:1.68; color:#3F4B5A; margin:14px 0 0; max-width:680px;">A partner joins one of your class sessions and uses the CCEDIR protocol — <em>Capturing Classroom Engagement Data for Instructor Reflection</em> — to log what's happening minute by minute: when you're presenting, when students are working, when discussion is live. Afterward you receive a spreadsheet and turn it into a visualization of your own engagement patterns — the kind of snapshot that's almost impossible to see from inside the moment.</p>
+
+        <sc-if value="{{ showCcedir }}" hint-placeholder-val="{{ true }}">
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:26px 0 0;">
+          <sc-for list="{{ ccedirFlow }}" as="c" hint-placeholder-count="3">
+            <div style="background:#fff; border:1px solid #D6E1F0; border-radius:11px; padding:18px 20px;">
+              <div style="font-size:12px; font-weight:700; color:#1E407C; letter-spacing:.04em;">{{ c.n }}</div>
+              <div style="font-size:15px; font-weight:600; color:#001E44; margin:7px 0 4px;">{{ c.t }}</div>
+              <p style="font-size:13.5px; line-height:1.55; color:#5A6679; margin:0;">{{ c.d }}</p>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="margin:24px 0 0; border-left:3px solid #4A7729; padding:2px 0 2px 20px;">
+          <p style="font-size:16.5px; line-height:1.6; color:#384350; margin:0; font-style:italic;">Your data is private and only for reflection and growth. It is not shared or used for evaluating performance.</p>
+          <div style="font-size:13.5px; color:#7E8B6E; margin-top:9px;">— The Grove Center, on CCEDIR</div>
+        </div>
+        </sc-if>
+
+        <a href="https://ccedir.science.psu.edu/" target="_blank" rel="noopener" style="display:inline-block; margin:24px 0 0; background:#1E407C; color:#fff; text-decoration:none; border-radius:9px; padding:13px 24px; font-size:15px; font-weight:600;">Explore the CCEDIR tool ↗</a>
+      </div>
+
+      <div style="margin:18px 0 0; background:#fff; border:1px solid #EAE4D8; border-radius:16px; padding:36px 40px; box-shadow:0 1px 3px rgba(40,30,10,0.04);">
+        <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+          <span style="font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#fff; background:#4A7729; padding:5px 11px; border-radius:999px;">Online</span>
+          <span style="font-size:13px; font-weight:600; color:#4A7729;">In Canvas · the Seven Principles lens</span>
+        </div>
+        <h3 style="font-family:'Roboto Slab',serif; font-weight:500; font-size:27px; line-height:1.2; color:#001E44; margin:16px 0 0;">Online course observation</h3>
+        <p style="font-size:17px; line-height:1.68; color:#3A4654; margin:14px 0 0; max-width:680px;">There's no class session to sit in on, so your partner is given guest or TA access to your online course and reviews it asynchronously, on their own time. Working from the Seven Principles of effective online teaching, they look at how you show up in the course and where students might be quietly slipping through — then bring it to your debrief.</p>
+
+        <div style="display:flex; flex-wrap:wrap; gap:8px; margin:22px 0 0;">
+          <sc-for list="{{ lenses }}" as="l" hint-placeholder-count="7">
+            <span style="font-size:13px; font-weight:600; color:#1E407C; background:#F2F5FA; border:1px solid #DDE6F1; border-radius:999px; padding:7px 14px;">{{ l }}</span>
+          </sc-for>
+        </div>
+
+        <a href="Online Teaching Companion.dc.html" style="display:inline-block; margin:24px 0 0; color:#1E407C; text-decoration:none; font-size:15.5px; font-weight:600; border-bottom:1px solid rgba(30,64,124,0.3);">See the Seven Principles companion →</a>
+      </div>
+    </section>
+
+    <section style="padding:72px 0 0;">
+      <div style="font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:#9A8F76; font-weight:700;">Common worries</div>
+      <h2 style="font-family:'Roboto Slab',serif; font-weight:500; font-size:36px; line-height:1.15; color:#001E44; margin:14px 0 24px; max-width:680px;">The questions everyone asks before they say yes.</h2>
+
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+        <div style="background:#fff; border:1px solid #EAE4D8; border-radius:12px; margin:0 0 12px; overflow:hidden;">
+          <button onClick="{{ f.toggle }}" style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:16px; text-align:left; background:transparent; border:none; cursor:pointer; padding:20px 24px; font-family:'Roboto',sans-serif;">
+            <span style="font-size:17.5px; font-weight:600; color:#1E407C; line-height:1.4;">{{ f.q }}</span>
+            <span style="flex:none; font-size:22px; color:#B0A790; transform:{{ f.caret }}; transition:transform .18s;">+</span>
+          </button>
+          <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+            <p style="font-size:16.5px; line-height:1.68; color:#3A4654; margin:0; padding:0 24px 22px;">{{ f.a }}</p>
+          </sc-if>
+        </div>
+      </sc-for>
+    </section>
+
+    <section style="padding:64px 0 90px;">
+      <div style="background:#001E44; border-radius:18px; padding:48px 46px; color:#E7ECF3;">
+        <div style="font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:#8FA6C4; font-weight:700;">Volunteer</div>
+        <h2 style="font-family:'Roboto Slab',serif; font-weight:500; font-size:38px; line-height:1.12; color:#fff; margin:14px 0 0; max-width:600px;">Ready to find a partner?</h2>
+        <p style="font-size:18px; line-height:1.65; color:#C2D0E4; margin:16px 0 28px; max-width:620px;">Email {{ contactName }} to volunteer — you'll be paired with a colleague, often from another department, so the focus stays on teaching rather than subject matter. Mention CCEDIR and the Grove Center will set up access.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:14px; align-items:center;">
+          <a href="mailto:{{ contactEmail }}?subject=Peer%20observation%20partnership" style="background:#E98300; color:#fff; text-decoration:none; border-radius:9px; padding:15px 26px; font-size:16px; font-weight:600; box-shadow:0 2px 10px rgba(233,131,0,0.28);">Email {{ contactName }} to volunteer</a>
+          <span style="font-size:15px; color:#9DB1CC;">{{ contactEmail }} · The Grove Center: grovecese@psu.edu</span>
+        </div>
+      </div>
+      <p style="font-size:13px; line-height:1.6; color:#9A8F76; margin:26px 0 0; text-align:center;">The Grove Center for Excellence in Science Education · {{ collegeLabel }} · Adapted from the Dutton Institute Peer Review Guide for Online Teaching, CC BY-NC-SA 4.0</p>
+    </section>
+
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;collegeLabel&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Penn State Eberly College of Science&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;contactName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Melissa Hicks&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;contactEmail&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;mjs100@psu.edu&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;showCcedir&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { openFaq: 0 };
+
+  toggleFaq(i){ this.setState(s => ({ openFaq: s.openFaq === i ? -1 : i })); }
+
+  renderVals(){
+    const collegeLabel = this.props.collegeLabel || "Penn State Eberly College of Science";
+    const contactName = this.props.contactName || "Melissa Hicks";
+    const contactEmail = this.props.contactEmail || "mjs100@psu.edu";
+    const showCcedir = this.props.showCcedir !== false;
+
+    const promises = ["Voluntary", "Confidential", "Never sent to the dean"];
+
+    const reasons = [
+      { h: "The observer learns the most", t: "Research on peer review is consistent: analyzing someone else's teaching forces you to name what good practice actually looks like — and you carry that lens straight back to your own course." },
+      { h: "You can't watch yourself teach", t: "A second set of eyes — or a simple record of what students were doing, minute by minute — gives you the snapshot you can never get from inside the moment you're leading." },
+      { h: "Teaching is private work", t: "Whether your classroom is a lecture hall or a Canvas shell, no colleague sees it incidentally the way they once might have down the hall. Partnering is how you build that perspective on purpose." }
+    ];
+
+    const isList = [
+      "Voluntary — you opt in, and you decide what to focus on",
+      "Reciprocal — you observe your partner, and they observe you",
+      "Confidential — the notes and data belong to you",
+      "Formative — built for reflection and growth, not judgment",
+      "Collegial — a conversation between peers, not a verdict"
+    ];
+    const isntList = [
+      "Not a formal review for your annual report or P&T dossier",
+      "Not an evaluation of your performance",
+      "Not reported to your chair, your dean, or anyone else",
+      "Not a pass/fail score against a checklist",
+      "Not a one-way critique — both of you are learning"
+    ];
+
+    const steps = [
+      { n: 1, t: "Volunteer and get paired", d: "Email " + contactName + " to opt in. You'll be matched with a colleague — often from another department — so the conversation stays about teaching rather than content expertise." },
+      { n: 2, t: "Set the focus together", d: "Before anyone observes anything, you meet and decide what you want eyes on: discussion, feedback, pacing, presence — whatever you're actively working on. You own the agenda." },
+      { n: 3, t: "Observe and gather data", d: "Your partner observes against the focus you chose — joining a class session in person (capturing engagement data with CCEDIR), or reviewing your online course in Canvas on their own time. Same goal, two modes." },
+      { n: 4, t: "Reflect together", d: "You debrief over the evidence: what surprised you, what's working, and the one thing you each want to try next. Honest beats polished — that conversation is the whole point." },
+      { n: 5, t: "Switch seats", d: "Then you do it for them. The partnership is reciprocal by design, so both of you leave with an outside perspective and something concrete to change." }
+    ];
+
+    const ccedirFlow = [
+      { n: "STEP 1", t: "Pre-observation", d: "You and your observer agree on the course goals and focus areas to capture." },
+      { n: "STEP 2", t: "Observation", d: "During the session, your partner uses the app to log activities and interactions." },
+      { n: "STEP 3", t: "Visualize", d: "You receive a spreadsheet and upload it to see your own engagement patterns." }
+    ];
+
+    const faqData = [
+      { q: "Will this affect my evaluation or promotion?", a: "No. This is separate from the formal peer review used for annual reports and tenure. It's voluntary and confidential — nothing from it reaches your file unless you personally decide to use it." },
+      { q: "I'm new to online teaching — is it too early for me?", a: "It's especially valuable early. Because the partnership is developmental rather than evaluative, there's no bar to clear. The point is to learn from a colleague while you're still shaping your course." },
+      { q: "Who will I be paired with?", a: "A fellow instructor, usually from a different department. Pairing across disciplines keeps the focus on teaching practice — presence, feedback, pacing — rather than on subject-matter detail." },
+      { q: "How much time does this take?", a: "A short pre-observation conversation, one observation, and a debrief — then the same in reverse for your partner. Spread across a semester, it's a light commitment with an outsized payoff." },
+      { q: "What if we disagree about what good teaching looks like?", a: "That's not a problem — it's the value. Comparing how two scientists approach the same teaching challenge is exactly the kind of reflection this partnership is built to create." }
+    ];
+    const faqs = faqData.map((f, i) => ({
+      q: f.q, a: f.a,
+      open: this.state.openFaq === i,
+      caret: this.state.openFaq === i ? "rotate(45deg)" : "rotate(0deg)",
+      toggle: () => this.toggleFaq(i)
+    }));
+
+    const lenses = ["Instructor presence", "Peer learning", "Active learning", "Feedback that teaches", "Pacing and workload", "Clear expectations", "Inclusive design"];
+
+    return { collegeLabel, contactName, contactEmail, showCcedir, promises, reasons, isList, isntList, steps, ccedirFlow, lenses, faqs };
+  }
+}
+</script>
+</body>
+</html>
